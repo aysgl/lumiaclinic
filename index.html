@@ -300,36 +300,36 @@
         <div class="splide before-after relative">
             <div class="splide__track">
                 <ul class="splide__list">
-                    <li class="splide__slide">
+                    <li class="splide__slide" onclick="openModal(this)">
                         <div class="rounded-3xl">
-                            <img src="./assets/beforeafter.png" alt="">
+                            <img src="./assets/beforeafter.png" data-full-url="./assets/beforeafter.png" alt="">
 
                         </div>
                     </li>
-                    <li class="splide__slide">
+                    <li class="splide__slide" onclick="openModal(this)">
                         <div class="rounded-3xl">
-                            <img src="./assets/beforeafter.png" alt="">
+                            <img src="./assets/about2.png" data-full-url="./assets/about2.png" alt="">
 
                         </div>
                     </li>
-                    <li class="splide__slide">
+                    <li class="splide__slide" onclick="openModal(this)">
                         <div class="rounded-3xl">
-                            <img src="./assets/beforeafter.png" alt="">
+                            <img src="./assets/beforeafter.png" data-full-url="./assets/beforeafter.png" alt="">
                         </div>
                     </li>
-                    <li class="splide__slide">
+                    <li class="splide__slide" onclick="openModal(this)">
                         <div class="rounded-3xl">
-                            <img src="./assets/beforeafter.png" alt="">
+                            <img src="./assets/beforeafter.png" data-full-url="./assets/beforeafter.png" alt="">
                         </div>
                     </li>
-                    <li class="splide__slide">
+                    <li class="splide__slide" onclick="openModal(this)">
                         <div class="rounded-3xl">
-                            <img src="./assets/beforeafter.png" alt="">
+                            <img src="./assets/about1.png" data-full-url="./assets/about1.png" alt="">
                         </div>
                     </li>
-                    <li class="splide__slide">
+                    <li class="splide__slide" onclick="openModal(this)">
                         <div class="rounded-3xl">
-                            <img src="./assets/beforeafter.png" alt="">
+                            <img src="./assets/beforeafter.png" data-full-url="./assets/beforeafter.png" alt="">
                         </div>
                     </li>
                 </ul>
@@ -1055,6 +1055,37 @@
         <div class="bg-gradient-to-t from-[#0B0D39] to-[#444892] top-0 left-0 z-0 absolute h-full w-full"></div>
     </section>
 
+    <!-- Modal -->
+    <div id="modal" class="relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
+
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block z-10">
+                <button type="button" onclick="closeModal()"
+                    class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                    <span class="sr-only">Close</span>
+                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex h-full w-full items-end justify-center text-center sm:items-center">
+                <div
+                    class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all p-6 h-auto">
+                    <div id="image-carousel" class="splide w-[600px] h-[600px]" aria-label="Beautiful Images">
+                        <div class="splide__track">
+                            <ul class="splide__list h-full" id="modal-carousel-images">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
     <script>
         const updateSlideOpacity = (splide) => {
@@ -1074,6 +1105,8 @@
             slides[leftIndex].style.opacity = '0.3';
             slides[rightIndex].style.opacity = '0.3';
         };
+
+        new Splide('#image-carousel').mount();
 
         document.addEventListener('DOMContentLoaded', () => {
             const treatment = new Splide('.our-treatments', {
@@ -1209,6 +1242,55 @@
         closeBtn.addEventListener('click', () => {
             mobileMenu.classList.add('hidden');
         });
+
+        // Modal
+        let splideModal;
+
+        function openModal(element) {
+            const images = document.querySelectorAll('#beforeafter .splide__slide img');
+            const clickedImageSrc = element.querySelector('img').getAttribute('data-full-url');
+            const imageUrls = Array.from(images).map(img => img.getAttribute('data-full-url'));
+            const modalCarouselContainer = document.getElementById('modal-carousel-images');
+            modalCarouselContainer.innerHTML = '';
+
+            imageUrls.forEach(url => {
+                const li = document.createElement('li');
+                li.classList.add('splide__slide');
+                const img = document.createElement('img');
+                img.classList.add('rounded-3xl', 'max-w-[600px]', 'h-[600px]');
+                img.src = url;
+                img.alt = 'Image';
+                li.appendChild(img);
+                modalCarouselContainer.appendChild(li);
+            });
+
+            setTimeout(() => {
+                const activeImage = Array.from(modalCarouselContainer.children).find(
+                    slide => slide.querySelector('img').src === clickedImageSrc
+                );
+                if (activeImage) {
+                    activeImage.classList.add('is-active');
+                }
+            }, 100);
+
+            document.getElementById('modal').classList.remove('hidden');
+
+            if (splideModal) {
+                splideModal.destroy();
+            }
+
+            splideModal = new Splide('#image-carousel', {
+                type: 'fade',
+                arrows: true,
+                pagination: false,
+                speed: 500,
+            }).mount();
+        }
+
+        // Close modal function
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
     </script>
 </body>
 

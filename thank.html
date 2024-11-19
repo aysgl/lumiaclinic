@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+</head>
+
+<body>
+    <header class="bg-white w-full fixed inset-x-0 top-0 z-50">
+        <div class="container mx-auto">
+            <nav class="flex items-center justify-between" aria-label="Global">
+                <div class="flex lg:flex-1">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-auto w-[188px]" src="./assets/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="flex lg:hidden">
+                    <button type="button" id="hamburger-btn"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <a href="#ourclinic" class="text-md">Our Clinic</a>
+                    <a href="#beforeafter" class="text-md">Before&After</a>
+                    <a href="#happypatients" class="text-md">Happy Patients</a>
+                    <a href="#ourtreatments" class="text-md">Our Treatments</a>
+                    <a href="#contactus" class="text-md">Contact Us</a>
+                </div>
+            </nav>
+            <div class="lg:hidden" role="dialog" aria-modal="true">
+                <div class="fixed w-full inset-y-0 right-0 z-50 overflow-y-auto bg-white px-6 py-6 hidden"
+                    id="mobile-menu">
+                    <div class="flex items-center justify-between">
+                        <a href="#" class="">
+                            <span class="sr-only">Your Company</span>
+                            <img class="h-auto w-[188px]" src="./assets/logo.svg" alt="">
+                        </a>
+                        <button type="button" id="close-btn" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                            <span class="sr-only">Close menu</span>
+                            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mt-6 flow-root">
+                        <div class="-my-6 divide-y divide-gray-500/10">
+                            <div class="space-y-2 py-6">
+                                <a href="#ourclinic"
+                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Our
+                                    Clinic</a>
+                                <a href="#beforeafter"
+                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Before&After</a>
+                                <a href="#happypatients"
+                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Happy
+                                    Patients</a>
+                                <a href="#ourtreatments"
+                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Our
+                                    Treatments</a>
+                                <a href="#contactus"
+                                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contact
+                                    Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="flex items-center justify-center min-h-75 mt-20 p-10">
+        <div class="w-full max-w-xl text-center mt-20">
+            <div class="mb-10">
+                <img class="mx-auto sm:w-[528px] w-full h-auto" src="./assets/thankyou.svg" alt="Thank you Icon">
+            </div>
+            <div class="mb-6">
+                <img class="mx-auto w-auto h-[114px]" src="./assets/check.svg" alt="Check Icon">
+            </div>
+            <p class="text-gray-800 font-medium">
+                Thanks a bunch for filling that out. It means a lot to us, just like you do! We really appreciate you
+                giving us a moment of your time today. Thanks for being you.
+            </p>
+        </div>
+    </section>
+
+    <section id="contactus" class="container-fluid bg-[#E6E7E2] bg-opacity-50 py-10 mt-20">
+        <div class="container mx-auto">
+            <div class="grid sm:grid-cols-3 grid-cols-1 gap-10 justify-between items-center">
+                <div>
+                    <p class="text-[#356dff] font-bold uppercase mb-10">contact us</p>
+                    <img src="./assets/logo.svg" class="w-[430px]" alt="">
+                    <div class="sm:w-[450px] w-full"> <small>The quick, brown fox jumps over a lazy dog. DJs flock by
+                            when MTV ax
+                            quiz
+                            prog. Junk MTV quiz
+                            graced by
+                            fox whelps.
+                            Bawds jog, flick quartz, vex nymphs. Waltz, bad</small>
+                    </div>
+                    <p class="font-bold uppercase mb-0 mt-4">Call Now</p>
+                    <a href="tel:905318818038" class="text-3xl">+90 531 881 80 38</a>
+                </div>
+                <div class="md:ms-24">
+                    <ul class="space-y-8">
+                        <li><a href="#ourclinic">Our Clinic</a></li>
+                        <li><a href="#beforeafter">Before&After</a></li>
+                        <li><a href="#happypatients">Happy Patients</a></li>
+                        <li><a href="#ourtreatments">Our Treatments</a></li>
+                    </ul>
+                </div>
+                <div class=" w-full bg-white p-6 shadow-xl rounded-3xl mb-10">
+                    <p class="text-xl text-center font-bold">Let's Get Linked!</p>
+                    <form action="#" method="POST">
+                        <div class="grid">
+                            <div class="mt-2.5">
+                                <input type="text" name="first-name" placeholder="Full Name"
+                                    class="block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
+                            </div>
+                            <div class="mt-2.5">
+                                <input type="tel" name="phone-number" placeholder="Phone Number" autocomplete="tel"
+                                    class="block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
+                            </div>
+                            <div class="mt-2.5">
+                                <input type="email" name="email" placeholder="Email" autocomplete="email"
+                                    class="block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
+                            </div>
+                        </div>
+                        <div class="mt-4 flex justify-center">
+                            <button type="submit"
+                                class="bg-[#356dff] px-14 py-2.5 rounded-full text-center text-sm font-semibold text-white shadow-sm hover:bg-yellow-400 focus-visible:outline">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="grid sm:grid-cols-2 grid-cols-1 gap-4 items-center">
+                <div>
+                    <small>
+                        <a href="mailto:info@lumiaclinic.com">info@lumiaclinic.com</a>
+                    </small>
+                    <br>
+                    <small><a>Şenlikköy, Florya Cd. No: 47/1, 34153 Bakırköy/İstanbul</a></small>
+                </div>
+                <div>
+                    <div class="flex gap-4">
+                        <span class="me-10">Follow us</span>
+                        <a href="#"><img class="h-[24px] w-auto" src="./assets/facebook.svg" alt="" class="w-10"></a>
+                        <a href="#"><img class="h-[24px] w-auto" src="./assets/instagram.svg" alt="" class="w-10"></a>
+                        <a href="#"><img class="h-[24px] w-auto" src="./assets/tiktok.svg" alt="" class="w-10"></a>
+                        <a href="#"><img class="h-[24px] w-auto" src="./assets/snapchat.svg" alt="" class="w-10"></a>
+                        <a href="#"><img class="h-[24px] w-auto" src="./assets/twitter.svg" alt="" class="w-10"></a>
+                        <a href="#"><img class="h-[24px] w-auto" src="./assets/whatsapp2.svg" alt="" class="w-10"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto text-center py-4 text-gray-400">
+        Copyright © 2024 Simur Teknoloji A.Ş. Bütün Hakları Saklıdır.
+    </section>
+    <section class="container-fluid relative">
+        <div class="container mx-auto grid sm:grid-cols-2 grid-cols-1 sm:gap-10 gap-4 relative z-10 py-3 items-center">
+            <div class="text-white flex gap-10 justify-center items-center text-lg font-medium">
+                <img src="./assets/plane.svg" alt="">
+                Save up to 20% from your Flight Ticket
+            </div>
+            <div class="grid sm:grid-cols-3 grid-cols-1 gap-3 mx-auto sm:divide-x items-center">
+                <div class="text-white flex gap-4 sm:px-6 px-3 items-center"><img src="./assets/contact.svg"
+                        alt="">Contact Us
+                </div>
+                <div class="text-white flex gap-4 sm:px-6 px-3 items-center"><img src="./assets/phone.svg" alt="">Phone
+                </div>
+                <div class="text-white flex gap-4 sm:px-6 px-3 items-center"><img src="./assets/whatsapp.svg"
+                        alt="">WhatsApp
+                </div>
+            </div>
+        </div>
+        <div class="bg-gradient-to-t from-[#0B0D39] to-[#444892] top-0 left-0 z-0 absolute h-full w-full"></div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
+
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block z-10">
+                <button type="button" onclick="closeModal()"
+                    class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                    <span class="sr-only">Close</span>
+                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        aria-hidden="true" data-slot="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex h-full w-full items-end justify-center text-center sm:items-center">
+                <div
+                    class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all p-6 h-auto">
+                    <div id="image-carousel" class="splide w-[600px] h-[600px]" aria-label="Beautiful Images">
+                        <div class="splide__track">
+                            <ul class="splide__list h-full" id="modal-carousel-images">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+    <script>
+        const updateSlideOpacity = (splide) => {
+            const slides = splide?.Components?.Elements?.slides;
+            if (!slides) return;
+            const totalSlides = slides.length;
+            const currentIndex = splide.index;
+
+            slides.forEach(slide => {
+                slide.style.opacity = '1';
+            });
+
+            const leftIndex = (currentIndex - 2 + totalSlides) % totalSlides;
+            const rightIndex = (currentIndex + 2) % totalSlides;
+
+            slides[currentIndex].style.opacity = '1';
+            slides[leftIndex].style.opacity = '0.3';
+            slides[rightIndex].style.opacity = '0.3';
+        };
+
+        new Splide('#image-carousel').mount();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const treatment = new Splide('.our-treatments', {
+                perPage: 4,
+                gap: '1rem',
+                pagination: false,
+                focus: 'center',
+                type: 'loop',
+                rewind: true,
+                drag: true,
+                breakpoints: {
+                    1200: { perPage: 4 },
+                    640: { perPage: 2 },
+                },
+            });
+            treatment.on('mounted', () => {
+                setTimeout(() => {
+                    updateSlideOpacity();
+                }, 100);
+            });
+            treatment.on('move', () => updateSlideOpacity(treatment));
+            treatment.mount();
+
+
+            const patients = new Splide('.patients', {
+                perPage: 4,
+                gap: '1rem',
+                pagination: false,
+                focus: 'center',
+                type: 'loop',
+                rewind: true,
+                drag: true,
+                arrow: false,
+                breakpoints: {
+                    1200: { perPage: 4 },
+                    640: { perPage: 2 },
+                },
+            });
+            patients.on('mounted', () => {
+                setTimeout(() => {
+                    updateSlideOpacity();
+                }, 100);
+            });
+            patients.on('move', () => updateSlideOpacity(patients));
+            patients.mount();
+
+
+            const beforeafter = new Splide('.before-after', {
+                perPage: 4,
+                gap: '1rem',
+                pagination: false,
+                focus: 'center',
+                type: 'loop',
+                rewind: true,
+                drag: true,
+                arrow: false,
+                breakpoints: {
+                    1200: { perPage: 4 },
+                    640: { perPage: 2 },
+                },
+            });
+            beforeafter.on('move', () => updateSlideOpacity(beforeafter));
+            beforeafter.mount();
+
+            const videos = new Splide('.videos', {
+                perPage: 4,
+                gap: '1rem',
+                pagination: false,
+                focus: 'center',
+                type: 'loop',
+                rewind: true,
+                drag: true,
+                breakpoints: {
+                    1200: { perPage: 4 },
+                    640: { perPage: 2 },
+                },
+            });
+            videos.on('move', () => updateSlideOpacity(videos));
+            videos.mount();
+
+            const comments = new Splide('.comments', {
+                perPage: 2.5,
+                focus: "center",
+                gap: '1rem',
+                type: 'loop',
+                rewind: true,
+                drag: true,
+                arrow: true,
+                breakpoints: {
+                    1200: { perPage: 2 },
+                    640: { perPage: 1, arrow: false },
+                },
+            });
+            comments.on('move', () => updateSlideOpacity(comments));
+            comments.mount();
+        });
+
+        // Navbar anchor
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', function () {
+                links.forEach(link => link.classList.remove('font-semibold', 'text-[#356dff]'));
+                this.classList.add('font-semibold', 'text-[#356dff]');
+            });
+        });
+
+        // Accordion
+        function toggleAccordion(index) {
+            const content = document.getElementById(`faq-${index}`);
+            const plusIcon = document.getElementById(`plus-icon-${index}`);
+            const minusIcon = document.getElementById(`minus-icon-${index}`);
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                plusIcon.classList.add('hidden');
+                minusIcon.classList.remove('hidden');
+            } else {
+                content.classList.add('hidden');
+                plusIcon.classList.remove('hidden');
+                minusIcon.classList.add('hidden');
+            }
+        }
+
+        // Hamburger Menu
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        // Modal
+        let splideModal;
+
+        function openModal(element) {
+            const images = document.querySelectorAll('#beforeafter .splide__slide img');
+            const clickedImageSrc = element.querySelector('img').getAttribute('data-full-url');
+            const imageUrls = Array.from(images).map(img => img.getAttribute('data-full-url'));
+            const modalCarouselContainer = document.getElementById('modal-carousel-images');
+            modalCarouselContainer.innerHTML = '';
+
+            imageUrls.forEach(url => {
+                const li = document.createElement('li');
+                li.classList.add('splide__slide');
+                const img = document.createElement('img');
+                img.classList.add('rounded-3xl', 'max-w-[600px]', 'h-[600px]');
+                img.src = url;
+                img.alt = 'Image';
+                li.appendChild(img);
+                modalCarouselContainer.appendChild(li);
+            });
+
+            setTimeout(() => {
+                const activeImage = Array.from(modalCarouselContainer.children).find(
+                    slide => slide.querySelector('img').src === clickedImageSrc
+                );
+                if (activeImage) {
+                    activeImage.classList.add('is-active');
+                }
+            }, 100);
+
+            document.getElementById('modal').classList.remove('hidden');
+
+            if (splideModal) {
+                splideModal.destroy();
+            }
+
+            splideModal = new Splide('#image-carousel', {
+                type: 'fade',
+                arrows: true,
+                pagination: false,
+                speed: 500,
+            }).mount();
+        }
+
+        // Close modal function
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+    </script>
+</body>
+
+</html>
