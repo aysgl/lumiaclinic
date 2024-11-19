@@ -13,7 +13,7 @@
 <body>
     <header class="bg-white w-full fixed inset-x-0 top-0 z-50">
         <div class="container mx-auto">
-            <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <nav class="flex items-center justify-between" aria-label="Global">
                 <div class="flex lg:flex-1">
                     <a href="#" class="-m-1.5 p-1.5">
                         <span class="sr-only">Your Company</span>
@@ -21,10 +21,9 @@
                     </a>
                 </div>
                 <div class="flex lg:hidden">
-                    <button type="button"
+                    <button type="button" id="hamburger-btn"
                         class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                         <span class="sr-only">Open main menu</span>
-
                         <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                             aria-hidden="true" data-slot="icon">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -41,14 +40,14 @@
                 </div>
             </nav>
             <div class="lg:hidden" role="dialog" aria-modal="true">
-                <div
-                    class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="fixed w-full inset-y-0 right-0 z-50 overflow-y-auto bg-white px-6 py-6 hidden"
+                    id="mobile-menu">
                     <div class="flex items-center justify-between">
                         <a href="#" class="">
                             <span class="sr-only">Your Company</span>
                             <img class="h-auto w-[188px]" src="./assets/logo.svg" alt="">
                         </a>
-                        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                        <button type="button" id="close-btn" class="-m-2.5 rounded-md p-2.5 text-gray-700">
                             <span class="sr-only">Close menu</span>
                             <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                                 aria-hidden="true" data-slot="icon">
@@ -74,7 +73,6 @@
                                     class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Contact
                                     Us</a>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -82,8 +80,8 @@
         </div>
     </header>
 
-    <section class="container-fluid relative px-6 pt-14">
-        <div class="container mx-auto pt-20 pb-10 relative z-10">
+    <section class="container-fluid relative px-6 pt-24">
+        <div class="container mx-auto pb-10 relative z-10">
             <div class="text-center">
                 <h1 class="text-balance text-5xl font-semibold tracking-tight text-white">
                     Dental Treatments in Turkey</h1>
@@ -91,7 +89,7 @@
                     now
                     and get a special discount!
                 </h2>
-                <div class="flex flex-row gap-2 ">
+                <div class="grid sm:grid-cols-2 grid-cols-1 gap-2 ">
                     <div>
                         <img src="./assets/hero.png" alt="">
                     </div>
@@ -105,7 +103,7 @@
                         <img src="./assets/logos.png" class="px-20" alt="">
                     </div>
                 </div>
-                <div class="bg-white rounded-2xl p-6 mx-20">
+                <div class="bg-white rounded-2xl p-6 sm:mx-20 sm:mt-0 mt-10">
                     <p class="text-center font-bold text-xl"> Let's Get Linked!</p>
                     <form action="#" method="POST" class="mx-auto">
                         <div class="grid grid-cols-1 gap-x-4 sm:grid-cols-3">
@@ -342,8 +340,8 @@
         <h2 class="text text-[#356dff] text-center">ABOUT US</h2>
         <p class="text-3xl font-semibold mb-10 text-center">SAFETY, THEN EVERYTHING</p>
 
-        <div class="flex flex-row gap-10">
-            <div class="flex-1 w-50">At Lumia Clinic, safety is the cornerstone of exceptional healthcare. Our
+        <div class="grid sm:grid-cols-2 grid-cols-1 gap-10">
+            <div>At Lumia Clinic, safety is the cornerstone of exceptional healthcare. Our
                 highly
                 experienced
                 doctors
@@ -357,7 +355,7 @@
                 environment to cutting-edge
                 technology, our state-of-the-art facilities enable us to deliver accurate and effective treatments.
             </div>
-            <ul class="flex-1 w-50">
+            <ul>
                 <li class="flex flex-column gap-6 mb-6">
                     <img src="./assets/about1.svg" alt="" class="me-2">
                     <div>
@@ -382,86 +380,74 @@
             </ul>
         </div>
 
-        <div class="bg-white pb-24">
-            <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                <div class="mx-auto mt-10 grid grid-cols-3 gap-6">
-                    <div class="relative">
-                        <div
-                            class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
-                            <p class="text-[#f3da33] font-bold text-lg">Get a Free Consultation</p>
-                            <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
-                                provide
-                                you a free consultation.</p>
-                        </div>
-                        <img src="./assets/about1.png" alt="About Image" class="w-full h-full object-cover">
-                    </div>
-                    <div class="relative">
-                        <div
-                            class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
-                            <p class="text-[#f3da33] font-bold text-lg">Get a Free Consultation</p>
-                            <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
-                                provide
-                                you a free consultation.</p>
-                        </div>
-                        <img src="./assets/about2.png" alt="About Image" class="w-full h-full object-cover">
-                    </div>
-                    <div class="relative">
-                        <div
-                            class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
-                            <p class="text-[#f3da33] font-bold text-lg">Get a Free Consultation</p>
-                            <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
-                                provide
-                                you a free consultation.</p>
-                        </div>
-                        <img src="./assets/about3.png" alt="About Image" class="w-full h-full object-cover">
-                    </div>
-                    <div class="relative">
-                        <div
-                            class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
-                            <p class="text-[#f3da33] font-bold text-lg">Get a Free Consultation</p>
-                            <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
-                                provide
-                                you a free consultation.</p>
-                        </div>
-                        <img src="./assets/about4.png" alt="About Image" class="w-full h-full object-cover">
-                    </div>
-                    <div class="relative">
-                        <div
-                            class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
-                            <p class="text-[#f3da33] font-bold text-lg">Get a Free Consultation</p>
-                            <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
-                                provide
-                                you a free consultation.</p>
-                        </div>
-                        <img src="./assets/about5.png" alt="About Image" class="w-full h-full object-cover">
-                    </div>
-                    <div class="relative">
-                        <div
-                            class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
-                            <p class="text-[#f3da33] font-bold text-lg">Get a Free Consultation</p>
-                            <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
-                                provide
-                                you a free consultation.</p>
-                        </div>
-                        <img src="./assets/about6.png" alt="About Image" class="w-full h-full object-cover">
-                    </div>
-                    <div class="relative col-start-2">
-                        <div
-                            class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
-                            <p class="text-[#f3da33] font-bold text-lg">Get a Free Consultation 1</p>
-                            <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
-                                provide
-                                you a free consultation.</p>
-                        </div>
-                        <img src="./assets/about7.png" alt="About Image" class="w-full h-full object-cover">
-                    </div>
-
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 mt-10 gap-6">
+            <div class="relative h-full">
+                <div class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
+                    <p class="text-[#f3da33] font-bold text-lg">Get a Free Consultation</p>
+                    <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
+                        provide
+                        you a free consultation.</p>
                 </div>
+                <img src="./assets/about1.png" alt="About Image" class="w-full h-full object-cover">
+            </div>
+            <div class="relative h-full">
+                <div class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
+                    <p class="text-[#f3da33] font-bold text-lg">Get a Free Consultation</p>
+                    <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
+                        provide
+                        you a free consultation.</p>
+                </div>
+                <img src="./assets/about2.png" alt="About Image" class="w-full h-full object-cover">
+            </div>
+            <div class="relative h-full">
+                <div class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
+                    <p class="text-[#f3da33] font-bold text-lg">Get a Free Consultation</p>
+                    <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
+                        provide
+                        you a free consultation.</p>
+                </div>
+                <img src="./assets/about3.png" alt="About Image" class="w-full h-full object-cover">
+            </div>
+            <div class="relative h-full">
+                <div class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
+                    <p class="text-[#f3da33] font-bold text-lg">Get a Free Consultation</p>
+                    <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
+                        provide
+                        you a free consultation.</p>
+                </div>
+                <img src="./assets/about4.png" alt="About Image" class="w-full h-full object-cover">
+            </div>
+            <div class="relative h-full">
+                <div class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
+                    <p class="text-[#f3da33] font-bold text-lg">Get a Free Consultation</p>
+                    <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
+                        provide
+                        you a free consultation.</p>
+                </div>
+                <img src="./assets/about5.png" alt="About Image" class="w-full h-full object-cover">
+            </div>
+            <div class="relative">
+                <div class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
+                    <p class="text-[#f3da33] font-bold text-lg">Get a Free Consultation</p>
+                    <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
+                        provide
+                        you a free consultation.</p>
+                </div>
+                <img src="./assets/about6.png" alt="About Image" class="w-full h-full object-cover">
+            </div>
+            <div class="relative md:col-start-2">
+                <div class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
+                    <p class="text-[#f3da33] font-bold text-lg">Get a Free Consultation 1</p>
+                    <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
+                        provide
+                        you a free consultation.</p>
+                </div>
+                <img src="./assets/about7.png" alt="About Image" class="w-full h-full object-cover">
             </div>
         </div>
     </section>
     <section class="container mx-auto py-20">
-        <div class="flex bg-[#E6E7E2] rounded-3xl mx-auto p-20 items-center">
+        <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 bg-[#E6E7E2] rounded-3xl mx-auto sm:p-20 p-10 items-center">
             <div class="flex-1 text-center mx-10">
                 <h2 class="text text-[#356dff] font-bold mb-6 text-xl">Why you should choose us?</h2>
                 <p class="text-3xl font-semibold mb-10">EXPERT CARE,
@@ -543,7 +529,7 @@
             <p class="text-3xl font-semibold mb-10">PATIENT COMMENTS</p>
         </div>
         <div class="splide comments relative">
-            <div class="splide__arrows splide__arrows--ltr absolute right-0 -top-20 w-[150px]">
+            <div class="sm:flex hidden splide__arrows splide__arrows--ltr absolute right-0 -top-20 w-[150px]">
                 <button class="splide__arrow splide__arrow--next me-5 w-[44px] h-[44px]" type="button"
                     aria-label="Previous slide" aria-controls="splide01-track">
                     <img src="./assets/arrowright.svg" alt="">
@@ -800,31 +786,25 @@
             <h2 class="text text-[#356dff]">FAQ</h2>
             <p class="text-3xl font-semibold mb-10">Answers to Your Dental Procedure Questions</p>
         </div>
-        <div class="flex gap-16 mb-20">
+        <div class="grid sm:grid-cols-2 grid-cols-1 gap-x-10 gap-y-4 mb-20">
             <dl class="space-y-6 w-full">
                 <div class="bg-[#FAFAF9] rounded-xl p-5">
                     <dt>
                         <button type="button" class="flex w-full items-center justify-between text-left text-gray-900"
-                            aria-controls="faq-0" aria-expanded="false">
-                            <span class="text-lg font-semibold">What's the best thing about Switzerland?</span>
+                            aria-controls="faq-0" aria-expanded="false" onclick="toggleAccordion(0)">
+                            <span class="text-lg font-semibold">What are dental crowns and when are they needed?</span>
                             <span class="ml-6 flex items-center">
-                                <!-- Artı ikon -->
-                                <svg class="plus-icon h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                                </svg>
-                                <!-- Eksi ikon -->
-                                <svg class="minus-icon h-6 w-6 hidden" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                                </svg>
+                                <img id="plus-icon-0" class="plus-icon h-6 w-6" src="./assets/plus.svg" alt="">
+                                <img id="minus-icon-0" class="minus-icon h-6 w-6 hidden" src="./assets/minus.svg"
+                                    alt="">
                             </span>
                         </button>
                     </dt>
                     <dd class="mt-2 hidden" id="faq-0">
-                        <p class="text-gray-600">I don't know, but the flag is a big plus. Lorem ipsum dolor sit
-                            amet
-                            consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+                        <p class="text-gray-600">Dental crowns are tooth-shaped caps placed over a tooth to restore its
+                            shape, size, strength, and appearance. They are
+                            often needed to protect weak or damaged teeth, cover dental implants, or support dental
+                            bridges.</p>
                     </dd>
                 </div>
             </dl>
@@ -832,31 +812,64 @@
                 <div class="bg-[#FAFAF9] rounded-xl p-5">
                     <dt>
                         <button type="button" class="flex w-full items-center justify-between text-left text-gray-900"
-                            aria-controls="faq-0" aria-expanded="false">
-                            <span class="text-lg font-semibold">What's the best thing about Switzerland?</span>
+                            aria-controls="faq-1" aria-expanded="false" onclick="toggleAccordion(1)">
+                            <span class="text-lg font-semibold">What's the best thing about Switzerland? 2</span>
                             <span class="ml-6 flex items-center">
-                                <!-- Artı ikon -->
-                                <svg class="plus-icon h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                    stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                                </svg>
-                                <!-- Eksi ikon -->
-                                <svg class="minus-icon h-6 w-6 hidden" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                                </svg>
+                                <img id="plus-icon-1" class="plus-icon h-6 w-6" src="./assets/plus.svg" alt="">
+                                <img id="minus-icon-1" class="minus-icon h-6 w-6 hidden" src="./assets/minus.svg"
+                                    alt="">
                             </span>
                         </button>
                     </dt>
-                    <dd class="mt-2 hidden" id="faq-0">
-                        <p class="text-gray-600">I don't know, but the flag is a big plus. Lorem ipsum dolor sit
-                            amet
-                            consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+                    <dd class="mt-2 hidden" id="faq-1">
+                        <p class="text-gray-600">I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet
+                            consectetur
+                            adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+                    </dd>
+                </div>
+            </dl>
+            <dl class="space-y-6 w-full">
+                <div class="bg-[#FAFAF9] rounded-xl p-5">
+                    <dt>
+                        <button type="button" class="flex w-full items-center justify-between text-left text-gray-900"
+                            aria-controls="faq-2" aria-expanded="false" onclick="toggleAccordion(2)">
+                            <span class="text-lg font-semibold">What's the best thing about Switzerland?</span>
+                            <span class="ml-6 flex items-center">
+                                <img id="plus-icon-2" class="plus-icon h-6 w-6" src="./assets/plus.svg" alt="">
+                                <img id="minus-icon-2" class="minus-icon h-6 w-6 hidden" src="./assets/minus.svg"
+                                    alt="">
+                            </span>
+                        </button>
+                    </dt>
+                    <dd class="mt-2 hidden" id="faq-2">
+                        <p class="text-gray-600">I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet
+                            consectetur
+                            adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+                    </dd>
+                </div>
+            </dl>
+            <dl class="space-y-6 w-full">
+                <div class="bg-[#FAFAF9] rounded-xl p-5">
+                    <dt>
+                        <button type="button" class="flex w-full items-center justify-between text-left text-gray-900"
+                            aria-controls="faq-3" aria-expanded="false" onclick="toggleAccordion(3)">
+                            <span class="text-lg font-semibold">What's the best thing about Switzerland?</span>
+                            <span class="ml-6 flex items-center">
+                                <img id="plus-icon-3" class="plus-icon h-6 w-6" src="./assets/plus.svg" alt="">
+                                <img id="minus-icon-3" class="minus-icon h-6 w-6 hidden" src="./assets/minus.svg"
+                                    alt="">
+                            </span>
+                        </button>
+                    </dt>
+                    <dd class="mt-2 hidden" id="faq-3">
+                        <p class="text-gray-600">I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet
+                            consectetur
+                            adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
                     </dd>
                 </div>
             </dl>
         </div>
-        <div class="flex gap-12">
+        <div class="grid sm:grid-cols-3 grid-cols-1 gap-12">
             <div class="bg-white shadow-xl rounded-2xl">
                 <div class="text-center bg-[#0B0D39] text-white text-3xl font-bold py-5 rounded-t-xl">LOREM IPSUM
                     <div class="relative group ml-2">
@@ -946,13 +959,14 @@
             </div>
         </div>
     </section>
-    <section id="contactus" class="container-fluid bg-[#E6E7E2] bg-opacity-50 py-10">
+    <section id="contactus" class="container-fluid bg-[#E6E7E2] bg-opacity-50 py-10 mt-20">
         <div class="container mx-auto">
-            <div class="flex justify-between items-center">
+            <div class="grid sm:grid-cols-3 grid-cols-1 gap-10 justify-between items-center">
                 <div>
                     <p class="text-[#356dff] font-bold uppercase mb-10">contact us</p>
                     <img src="./assets/logo.svg" class="w-[430px]" alt="">
-                    <div class="w-[450px]"> <small>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax
+                    <div class="sm:w-[450px] w-full"> <small>The quick, brown fox jumps over a lazy dog. DJs flock by
+                            when MTV ax
                             quiz
                             prog. Junk MTV quiz
                             graced by
@@ -961,9 +975,8 @@
                     </div>
                     <p class="font-bold uppercase mb-0 mt-4">Call Now</p>
                     <a href="tel:905318818038" class="text-3xl">+90 531 881 80 38</a>
-
                 </div>
-                <div class="mx-16">
+                <div class="md:ms-24">
                     <ul class="space-y-8">
                         <li><a href="#ourclinic">Our Clinic</a></li>
                         <li><a href="#beforeafter">Before&After</a></li>
@@ -971,7 +984,7 @@
                         <li><a href="#ourtreatments">Our Treatments</a></li>
                     </ul>
                 </div>
-                <div class="min-w-[430px] bg-white p-6 shadow-xl rounded-3xl mb-10">
+                <div class=" w-full bg-white p-6 shadow-xl rounded-3xl mb-10">
                     <p class="text-xl text-center font-bold">Let's Get Linked!</p>
                     <form action="#" method="POST">
                         <div class="grid">
@@ -997,15 +1010,15 @@
                     </form>
                 </div>
             </div>
-            <div class="flex items-center">
-                <div class="flex-1">
+            <div class="grid sm:grid-cols-2 grid-cols-1 gap-4 items-center">
+                <div>
                     <small>
                         <a href="mailto:info@lumiaclinic.com">info@lumiaclinic.com</a>
                     </small>
                     <br>
                     <small><a>Şenlikköy, Florya Cd. No: 47/1, 34153 Bakırköy/İstanbul</a></small>
                 </div>
-                <div class="flex-1">
+                <div>
                     <div class="flex gap-4">
                         <span class="me-10">Follow us</span>
                         <a href="#"><img class="h-[24px] w-auto" src="./assets/facebook.svg" alt="" class="w-10"></a>
@@ -1019,20 +1032,23 @@
             </div>
         </div>
     </section>
-    <section class="container mx-auto text-center py-4">
+    <section class="container mx-auto text-center py-4 text-gray-400">
         Copyright © 2024 Simur Teknoloji A.Ş. Bütün Hakları Saklıdır.
     </section>
     <section class="container-fluid relative">
-        <div class="container mx-auto flex gap-10 relative z-10 py-3 items-center">
+        <div class="container mx-auto grid sm:grid-cols-2 grid-cols-1 sm:gap-10 gap-4 relative z-10 py-3 items-center">
             <div class="text-white flex gap-10 justify-center items-center text-lg font-medium">
                 <img src="./assets/plane.svg" alt="">
                 Save up to 20% from your Flight Ticket
             </div>
-            <div class="flex ms-auto divide-x items-center">
-                <div class="text-white flex gap-4 px-10 items-center"><img src="./assets/contact.svg" alt="">Contact Us
+            <div class="grid sm:grid-cols-3 grid-cols-1 gap-3 mx-auto sm:divide-x items-center">
+                <div class="text-white flex gap-4 sm:px-6 px-3 items-center"><img src="./assets/contact.svg"
+                        alt="">Contact Us
                 </div>
-                <div class="text-white flex gap-4 px-10 items-center"><img src="./assets/phone.svg" alt="">Phone</div>
-                <div class="text-white flex gap-4 px-10 items-center"><img src="./assets/whatsapp.svg" alt="">WhatsApp
+                <div class="text-white flex gap-4 sm:px-6 px-3 items-center"><img src="./assets/phone.svg" alt="">Phone
+                </div>
+                <div class="text-white flex gap-4 sm:px-6 px-3 items-center"><img src="./assets/whatsapp.svg"
+                        alt="">WhatsApp
                 </div>
             </div>
         </div>
@@ -1042,18 +1058,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
     <script>
         const updateSlideOpacity = (splide) => {
-            // Splide örneği başarılı bir şekilde mount edildiyse, slides erişimi yapılabilir
             const slides = splide?.Components?.Elements?.slides;
             if (!slides) return;
             const totalSlides = slides.length;
             const currentIndex = splide.index;
 
-            // Tüm slaytların opaklığını sıfırla
             slides.forEach(slide => {
                 slide.style.opacity = '1';
             });
 
-            // Komşu slaytların opaklığını azalt
             const leftIndex = (currentIndex - 2 + totalSlides) % totalSlides;
             const rightIndex = (currentIndex + 2) % totalSlides;
 
@@ -1071,6 +1084,10 @@
                 type: 'loop',
                 rewind: true,
                 drag: true,
+                breakpoints: {
+                    1200: { perPage: 4 },
+                    640: { perPage: 2 },
+                },
             });
             treatment.on('mounted', () => {
                 setTimeout(() => {
@@ -1089,7 +1106,11 @@
                 type: 'loop',
                 rewind: true,
                 drag: true,
-                arrow: false
+                arrow: false,
+                breakpoints: {
+                    1200: { perPage: 4 },
+                    640: { perPage: 2 },
+                },
             });
             patients.on('mounted', () => {
                 setTimeout(() => {
@@ -1109,7 +1130,10 @@
                 rewind: true,
                 drag: true,
                 arrow: false,
-
+                breakpoints: {
+                    1200: { perPage: 4 },
+                    640: { perPage: 2 },
+                },
             });
             beforeafter.on('move', () => updateSlideOpacity(beforeafter));
             beforeafter.mount();
@@ -1122,6 +1146,10 @@
                 type: 'loop',
                 rewind: true,
                 drag: true,
+                breakpoints: {
+                    1200: { perPage: 4 },
+                    640: { perPage: 2 },
+                },
             });
             videos.on('move', () => updateSlideOpacity(videos));
             videos.mount();
@@ -1133,22 +1161,17 @@
                 type: 'loop',
                 rewind: true,
                 drag: true,
+                arrow: true,
+                breakpoints: {
+                    1200: { perPage: 2 },
+                    640: { perPage: 1, arrow: false },
+                },
             });
             comments.on('move', () => updateSlideOpacity(comments));
             comments.mount();
         });
 
-
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1E3A8A',
-                    },
-                },
-            },
-        };
-
+        // Navbar anchor
         const links = document.querySelectorAll('a');
         links.forEach(link => {
             link.addEventListener('click', function () {
@@ -1157,6 +1180,35 @@
             });
         });
 
+        // Accordion
+        function toggleAccordion(index) {
+            const content = document.getElementById(`faq-${index}`);
+            const plusIcon = document.getElementById(`plus-icon-${index}`);
+            const minusIcon = document.getElementById(`minus-icon-${index}`);
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                plusIcon.classList.add('hidden');
+                minusIcon.classList.remove('hidden');
+            } else {
+                content.classList.add('hidden');
+                plusIcon.classList.remove('hidden');
+                minusIcon.classList.add('hidden');
+            }
+        }
+
+        // Hamburger Menu
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
     </script>
 </body>
 

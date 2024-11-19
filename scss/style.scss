@@ -14,6 +14,12 @@ body {
     }
 }
 
+@media (min-width: 320px) {
+    .container {
+        padding: 1rem !important;
+    }
+}
+
 .splide__arrow {
     width: 3em !important;
     height: 3em !important;
