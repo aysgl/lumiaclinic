@@ -17,8 +17,24 @@ body {
 .splide__arrow {
     width: 3em !important;
     height: 3em !important;
+    background-color: transparent !important;
 }
 
-.splide__slide:first-child {
-    opacity: 0.5 !important;
+// .splide__slide {
+//     opacity: 0.5;
+//     transition: opacity 0.3s ease;
+// }
+
+.splide__pagination {
+    bottom: -20px !important;
+    opacity: 1 !important;
+
+    .is-active {
+        background-color: #707070 !important;
+        width: 26px;
+        height: 6px;
+        border-radius: 3px;
+        margin: 6px;
+        opacity: 1;
+    }
 }
