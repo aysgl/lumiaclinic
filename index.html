@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+</head>
+
+<body>
+    <header class="bg-white w-full fixed inset-x-0 top-0 z-50">
+        <div class="container mx-auto">
+            <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+                <div class="flex lg:flex-1">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-8 w-[188px] h-auto" src="./assets/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="flex lg:hidden">
+                    <button type="button"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Open main menu</span>
+
+                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true" data-slot="icon">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <a href="#" class="text-md font-semibold text-blue-700">Our Clinic</a>
+                    <a href="#" class="text-md text-gray-900">Before&After</a>
+                    <a href="#" class="text-md text-gray-900">Happy Patients</a>
+                    <a href="#" class="text-md text-gray-900">Our Treatments</a>
+                    <a href="#" class="text-md text-gray-900">Contact Us</a>
+                </div>
+            </nav>
+            <!-- Mobile menu, show/hide based on menu open state. -->
+            <div class="lg:hidden" role="dialog" aria-modal="true">
+                <!-- Background backdrop, show/hide based on slide-over state. -->
+                <div class="fixed inset-0 z-50"></div>
+                <div
+                    class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <div class="flex items-center justify-between">
+                        <a href="#" class="-m-1.5 p-1.5">
+                            <span class="sr-only">Your Company</span>
+                            <img class="h-8 w-auto"
+                                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                        </a>
+                        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                            <span class="sr-only">Close menu</span>
+                            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mt-6 flow-root">
+                        <div class="-my-6 divide-y divide-gray-500/10">
+                            <div class="space-y-2 py-6">
+                                <a href="#"
+                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Product</a>
+                                <a href="#"
+                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
+                                <a href="#"
+                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Marketplace</a>
+                                <a href="#"
+                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a>
+                            </div>
+                            <div class="py-6">
+                                <a href="#"
+                                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log
+                                    in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container-fluid relative px-6 pt-14">
+        <div class="container mx-auto pt-20 pb-10 relative z-50">
+            <div class="text-center">
+                <h1 class="text-balance text-5xl font-semibold tracking-tight text-white">
+                    Dental Treatments in Turkey</h1>
+                <h2 class="mt-4 mb-14 text-pretty text-3xl text-white">Book your appointment
+                    now
+                    and get a special discount!
+                </h2>
+                <div class="flex flex-row gap-2 ">
+                    <div>
+                        <img src="./assets/hero.png" alt="">
+                    </div>
+                    <div class="text-white self-center">
+                        <h3 class="font-bold text-2xl mb-8"> Your Dream Smile Starts Here,<br>
+                            in the Heart of Istanbul.</h3>
+                        <p class="mb-8">All Dental Treatments In<br>
+                            One Luxury Place<br>
+                            70% less price than abroad
+                        </p>
+                        <img src="./assets/logos.png" class="px-20" alt="">
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-4 mx-20">
+                    <p class="text-center font-bold text-xl"> Let's Get Linked!</p>
+                    <form action="#" method="POST" class="mx-auto">
+                        <div class="grid grid-cols-1 gap-x-4 sm:grid-cols-3">
+                            <div class="mt-2.5">
+                                <input type="text" name="first-name" placeholder="Full Name"
+                                    class="block w-full rounded-md border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-gray-400 sm:text-sm/6">
+                            </div>
+                            <div class="mt-2.5">
+                                <input type="tel" name="phone-number" placeholder="Phone Number" autocomplete="tel"
+                                    class="block w-full rounded-md border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-gray-400 sm:text-sm/6">
+                            </div>
+                            <div class="mt-2.5">
+                                <input type="email" name="email" placeholder="Email" autocomplete="email"
+                                    class="block w-full rounded-md border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-gray-400 sm:text-sm/6">
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button type="submit"
+                                class="bg-yellow-300 px-14 py-2.5 rounded-full text-center text-sm font-semibold text-white shadow-sm hover:bg-yellow-400 focus-visible:outline">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="text-center mt-10">
+                <p class="text-lg text-white">Limited Time Offer</p>
+                <p class="text-lg text-white font-bold">SAVE UP TO 3O% ON OURPLANE TICKETSBOOK NOW</p>
+            </div>
+        </div>
+        <div class="bg-gradient-to-t from-[#0B0D39] to-[#444892] top-0 left-0 z-0 absolute h-full w-full"></div>
+    </section>
+    <section class="container mx-auto text-center py-20">
+        <h2 class="text text-blue-700">VISIT</h2>
+        <p class="text-3xl font-semibold mb-10">OUR CLINIC</p>
+
+        <div class="flex gap-6 mb-6">
+            <div><img src="./assets/gallery1.png" alt=""></div>
+            <div class="grid gap-6">
+                <img src="./assets/gallery2.png" alt="">
+                <img src="./assets/gallery3.png" alt="">
+            </div>
+
+        </div>
+        <div class="flex gap-6">
+            <div><img src="./assets/gallery4.png" alt=""></div>
+            <div><img src="./assets/gallery5.png" alt=""></div>
+        </div>
+    </section>
+    <section class="container-fluid text-center py-20">
+        <h2 class="text text-blue-700">OUR EXCLUSIVE</h2>
+        <p class="text-3xl font-semibold">TREATMENTS</p>
+        <!-- Splide Slider -->
+        <div class="splide relative">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide mb-8">
+                        <div class="shadow-xl hover:shadow rounded-3xl p-5">
+                            <img src="./assets/slide1.png" alt="">
+                            <p class="text-2xl font-bold my-8">Dental Implants</p>
+                            <button type="button"
+                                class="block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-blue-700 hover:from-blue-700 hover:to-blue-700 transition ease-in-out delay-150  hover:transition-all py-4">
+                                More Information
+                            </button>
+                        </div>
+                    </li>
+                    <li class="splide__slide mb-8">
+                        <div class="shadow-xl rounded-3xl p-5">
+                            <img src="./assets/slide2.png" alt="">
+                            <p class="text-2xl font-bold my-8">Hollywood Smile</p>
+                            <button type="button"
+                                class="block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-blue-700 hover:from-blue-700 hover:to-blue-700 transition ease-in-out delay-150  hover:transition-all py-4">
+                                More Information
+                            </button>
+                        </div>
+                    </li>
+                    <li class="splide__slide mb-8">
+                        <div class="shadow-xl rounded-3xl p-5">
+                            <img src="./assets/slide3.png" alt="">
+                            <p class="text-2xl font-bold my-8">Zirconium Crowns</p>
+                            <button type="button"
+                                class="block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-blue-700 hover:from-blue-700 hover:to-blue-700 transition ease-in-out delay-150  hover:transition-all py-4">
+                                More Information
+                            </button>
+                        </div>
+                    </li>
+                    <li class="splide__slide mb-8">
+                        <div class="shadow-xl rounded-3xl p-5">
+                            <img src="./assets/slide3.png" alt="">
+                            <p class="text-2xl font-bold my-8">Zirconium Crowns</p>
+                            <button type="button"
+                                class="block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-blue-700 hover:from-blue-700 hover:to-blue-700 transition ease-in-out delay-150  hover:transition-all py-4">
+                                More Information
+                            </button>
+                        </div>
+                    </li>
+                    <li class="splide__slide mb-8">
+                        <div class="shadow-xl rounded-3xl p-5">
+                            <img src="./assets/slide3.png" alt="">
+                            <p class="text-2xl font-bold my-8">Zirconium Crowns</p>
+                            <button type="button"
+                                class="block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-blue-700 hover:from-blue-700 hover:to-blue-700 transition ease-in-out delay-150  hover:transition-all py-4">
+                                More Information
+                            </button>
+                        </div>
+                    </li>
+                    <li class="splide__slide mb-8">
+                        <div class="shadow-xl rounded-3xl p-5">
+                            <img src="./assets/slide3.png" alt="">
+                            <p class="text-2xl font-bold my-8">Zirconium Crowns</p>
+                            <button type="button"
+                                class="block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-blue-700 hover:from-blue-700 hover:to-blue-700 transition ease-in-out delay-150  hover:transition-all py-4">
+                                More Information
+                            </button>
+                        </div>
+                    </li>
+                    <li class="splide__slide mb-8">
+                        <div class="shadow-xl rounded-3xl p-5">
+                            <img src="./assets/slide3.png" alt="">
+                            <p class="text-2xl font-bold my-8">Zirconium Crowns</p>
+                            <button type="button"
+                                class="block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-blue-700 hover:from-blue-700 hover:to-blue-700 transition ease-in-out delay-150  hover:transition-all py-4">
+                                More Information
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="splide__arrows splide__arrows--ltr absolute left-[50%] -bottom-5 w-full">
+                <button class="splide__arrow splide__arrow--prev right-0 width-[44px] height-[44px]" type="button"
+                    aria-label="Previous slide" aria-controls="splide01-track">
+                    <img src="./assets/arrowright.svg" alt="">
+                </button>
+                <button class="splide__arrow splide__arrow--next left-0 -ms-10 width-[44px] height-[44px]" type="button"
+                    aria-label="Next slide" aria-controls="splide01-track">
+                    <img src="./assets/arrowleft.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+    </section>
+    <section class="container-fluid text-center py-20">
+        <h2 class="text text-blue-700">OUR HAPPY</h2>
+        <p class="text-3xl font-semibold mb-10">PATIENTS</p>
+        <div class="splide patients relative">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/patient1.png" alt="">
+
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/patient2.png" alt="">
+
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/patient3.png" alt="">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/patient3.png" alt="">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/patient3.png" alt="">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/patient3.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid text-center py-20">
+        <h2 class="text text-blue-700">TRAVEL PLAN</h2>
+        <p class="text-3xl font-semibold mb-10">USER JOURNEY</p>
+        <div class="container flex justify-center mx-auto text-center">
+            <img src="./assets/journey.svg" alt="">
+        </div>
+    </section>
+    <section class="container-fluid text-center py-20">
+        <h2 class="text text-blue-700">OUR EXCLUSIVE</h2>
+        <p class="text-3xl font-semibold mb-10">BEFORE & AFTER</p>
+        <div class="splide before-after relative">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/beforeafter.png" alt="">
+
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/beforeafter.png" alt="">
+
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/beforeafter.png" alt="">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/beforeafter.png" alt="">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/beforeafter.png" alt="">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/beforeafter.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto py-20">
+        <h2 class="text text-blue-700">ABOUT US</h2>
+        <p class="text-3xl font-semibold mb-10">SAFETY, THEN EVERYTHING</p>
+
+        <div class="flex flex-row gap-10">
+            <div class="flex-1 w-50">At Lumia Clinic, safety is the cornerstone of exceptional healthcare. Our
+                highly
+                experienced
+                doctors
+                possess the
+                expertise and dedication to your well-being. With a commitment to staying abreast of the latest
+                advancements in medical
+                science, we ensure every procedure is conducted with precision and care.
+                <br>
+                <br>
+                We leave no stone unturned when it comes to your safety. From strict protocols and a sterile
+                environment to cutting-edge
+                technology, our state-of-the-art facilities enable us to deliver accurate and effective treatments.
+            </div>
+            <ul class="flex-1 w-50">
+                <li class="flex flex-column gap-6 mb-6">
+                    <img src="./assets/about1.svg" alt="" class="me-2">
+                    <div>
+                        <div class="text-blue-700 font-bold"> Free Online Consultation</div>
+                        <p>Experience the future of Hollywood Smile consultations with our Free Consultation.</p>
+                    </div>
+                </li>
+                <li class="flex flex-column gap-6 mb-6">
+                    <img src="./assets/about2.svg" alt="" class="me-2">
+                    <div>
+                        <span class="text-blue-700 font-bold"> Affordable Prices</span>
+                        Discover exceptional quality at unbeatable prices.
+                    </div>
+                </li>
+                <li class="flex flex-column gap-6 mb-6">
+                    <img src="./assets/about3.svg" alt="" class="me-2">
+                    <div>
+                        <span class="text-blue-700 font-bold"> All Inclusive Packages</span>
+                        Enjoy peace of mind with our All-Inclusive Packages. From consultation to aftercare.
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="bg-white py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <h2 class="text-center text-lg/8 font-semibold text-gray-900">Trusted by the world’s most innovative
+                    teams</h2>
+                <div class="mx-auto mt-10 grid grid-cols-3 gap-6">
+                    <div class="relative">
+                        <div
+                            class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
+                            <p class="text-yellow-300 font-bold text-lg">Get a Free Consultation</p>
+                            <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
+                                provide
+                                you a free consultation.</p>
+                        </div>
+                        <img src="./assets/about1.png" alt="About Image" class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
+                            <p class="text-yellow-300 font-bold text-lg">Get a Free Consultation</p>
+                            <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
+                                provide
+                                you a free consultation.</p>
+                        </div>
+                        <img src="./assets/about2.png" alt="About Image" class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
+                            <p class="text-yellow-300 font-bold text-lg">Get a Free Consultation</p>
+                            <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
+                                provide
+                                you a free consultation.</p>
+                        </div>
+                        <img src="./assets/about3.png" alt="About Image" class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
+                            <p class="text-yellow-300 font-bold text-lg">Get a Free Consultation</p>
+                            <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
+                                provide
+                                you a free consultation.</p>
+                        </div>
+                        <img src="./assets/about4.png" alt="About Image" class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
+                            <p class="text-yellow-300 font-bold text-lg">Get a Free Consultation</p>
+                            <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
+                                provide
+                                you a free consultation.</p>
+                        </div>
+                        <img src="./assets/about5.png" alt="About Image" class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
+                            <p class="text-yellow-300 font-bold text-lg">Get a Free Consultation</p>
+                            <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
+                                provide
+                                you a free consultation.</p>
+                        </div>
+                        <img src="./assets/about6.png" alt="About Image" class="w-full h-full object-cover">
+                    </div>
+                    <div class="relative mx-auto">
+                        <div
+                            class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
+                            <p class="text-yellow-300 font-bold text-lg">Get a Free Consultation</p>
+                            <p class="text-white mt-2">We can always arrange you a meeting with our doctors and
+                                provide
+                                you a free consultation.</p>
+                        </div>
+                        <img src="./assets/about7.png" alt="About Image" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto py-20">
+        <div class="flex bg-[#E6E7E2] rounded-3xl mx-auto p-20">
+            <div class="flex-1 text-center">
+                <h2 class="text text-blue-700">Why you should choose us?</h2>
+                <p class="text-3xl font-semibold mb-10">EXPERT CARE,
+                    EFFORTLESS EXPERIENCE!</p>
+                <p>Limited Time Offer</p>
+                <small class="font-bold">SAVE UP TO 3O% ON OURPLANE TICKETSBOOK NOW</small>
+            </div>
+            <div class="flex-1 bg-white p-10 shadow rounded-3xl">
+                <p>Let's Get Linked!</p>
+                <form action="#" method="POST">
+                    <div class="grid">
+                        <div class="mt-2.5">
+                            <input type="text" name="first-name" placeholder="Full Name"
+                                class="block w-full rounded-md border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-gray-400 sm:text-sm/6">
+                        </div>
+                        <div class="mt-2.5">
+                            <input type="tel" name="phone-number" placeholder="Phone Number" autocomplete="tel"
+                                class="block w-full rounded-md border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-gray-400 sm:text-sm/6">
+                        </div>
+                        <div class="mt-2.5">
+                            <input type="email" name="email" placeholder="Email" autocomplete="email"
+                                class="block w-full rounded-md border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-gray-400 sm:text-sm/6">
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-center">
+                        <button type="submit"
+                            class="bg-blue-700 px-14 py-2.5 rounded-full text-center text-sm font-semibold text-white shadow-sm hover:bg-yellow-400 focus-visible:outline">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <section class="container-fluid py-20 text-center">
+        <h2 class="text text-blue-700">OUR HAPPY</h2>
+        <p class="text-3xl font-semibold mb-10">PATIENTS VIDEOS</p>
+        <div class="splide videos relative">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/videos1.png" alt="">
+
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/videos2.png" alt="">
+
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/videos3.png" alt="">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/videos1.png" alt="">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/videos2.png" alt="">
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="rounded-3xl">
+                            <img src="./assets/videos3.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid py-20">
+        <div class="text-center">
+            <h2 class="text text-blue-700">Meet Our Satisfied Patients!</h2>
+            <p class="text-3xl font-semibold mb-10">PATIENT COMMENTS</p>
+        </div>
+        <div class="splide comments relative">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide mb-4">
+                        <div class="shadow-xl rounded-3xl p-5">
+                            <p class="text-lg font-bold mb-2 text-black">Kelly anne bevon</p>
+                            <p>Director | 6 months ago</p>
+                            <div class="flex items-center mb-6">
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="#FCB002"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p>Planning my trip was made effortless by Grace, who ensured top-notch treatment. From
+                                arrival, everything was smooth. The
+                                clinic is immaculate, staff welcoming and professional. A big thank you to Grace and
+                                Mel for their support. Highly
+                                recommended!</p>
+                        </div>
+                    </li>
+                    <li class="splide__slide mb-4">
+                        <div class="shadow-xl rounded-3xl p-5">
+                            <p class="text-lg font-bold mb-2 text-black">Kelly anne bevon</p>
+                            <p>Director | 6 months ago</p>
+                            <div class="flex items-center mb-6">
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="#FCB002"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p>Planning my trip was made effortless by Grace, who ensured top-notch treatment. From
+                                arrival, everything was smooth. The
+                                clinic is immaculate, staff welcoming and professional. A big thank you to Grace and
+                                Mel for their support. Highly
+                                recommended!</p>
+                        </div>
+                    </li>
+                    <li class="splide__slide mb-4">
+                        <div class="shadow-xl rounded-3xl p-5">
+                            <p class="text-lg font-bold mb-2 text-black">Kelly anne bevon</p>
+                            <p>Director | 6 months ago</p>
+                            <div class="flex items-center mb-6">
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="#FCB002"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p>Planning my trip was made effortless by Grace, who ensured top-notch treatment. From
+                                arrival, everything was smooth. The
+                                clinic is immaculate, staff welcoming and professional. A big thank you to Grace and
+                                Mel for their support. Highly
+                                recommended!</p>
+                        </div>
+                    </li>
+                    <li class="splide__slide mb-4">
+                        <div class="shadow-xl rounded-3xl p-5">
+                            <p class="text-lg font-bold mb-2 text-black">Kelly anne bevon</p>
+                            <p>Director | 6 months ago</p>
+                            <div class="flex items-center mb-6">
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="#FCB002"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p>Planning my trip was made effortless by Grace, who ensured top-notch treatment. From
+                                arrival, everything was smooth. The
+                                clinic is immaculate, staff welcoming and professional. A big thank you to Grace and
+                                Mel for their support. Highly
+                                recommended!</p>
+                        </div>
+                    </li>
+                    <li class="splide__slide mb-4">
+                        <div class="shadow-xl rounded-3xl p-5">
+                            <p class="text-lg font-bold mb-2 text-black">Kelly anne bevon</p>
+                            <p>Director | 6 months ago</p>
+                            <div class="flex items-center mb-6">
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="#FCB002"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg class="size-5 shrink-0 text-[#FCB002]" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true" data-slot="icon">
+                                    <path fill-rule="evenodd"
+                                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p>Planning my trip was made effortless by Grace, who ensured top-notch treatment. From
+                                arrival, everything was smooth. The
+                                clinic is immaculate, staff welcoming and professional. A big thank you to Grace and
+                                Mel for their support. Highly
+                                recommended!</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex justify-center gap-10 mt-10">
+                <div class="w-[160px] h-[48px]">
+                    <img src="./assets/google.png" class="w-full" alt="">
+                </div>
+                <div class="w-[190px] h-[46px]">
+                    <img src="./assets/trustpilot.png" alt="">
+                </div>
+            </div>
+            <div class="splide__arrows splide__arrows--ltr absolute left-[50%] -bottom-5 w-full">
+                <button class="splide__arrow splide__arrow--prev right-0 width-[44px] height-[44px]" type="button"
+                    aria-label="Previous slide" aria-controls="splide01-track">
+                    <img src="./assets/arrowright.svg" alt="">
+                </button>
+                <button class="splide__arrow splide__arrow--next left-0 -ms-10 width-[44px] height-[44px]" type="button"
+                    aria-label="Next slide" aria-controls="splide01-track">
+                    <img src="./assets/arrowleft.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto py-20">
+        <div class="text-center">
+            <h2 class="text text-blue-700">FAQ</h2>
+            <p class="text-3xl font-semibold mb-10">Answers to Your Dental Procedure Questions</p>
+        </div>
+        <div class="flex gap-16 mb-20">
+            <dl class="space-y-6 w-full">
+                <div class="bg-[#FAFAF9] rounded-xl p-5">
+                    <dt>
+                        <button type="button" class="flex w-full items-center justify-between text-left text-gray-900"
+                            aria-controls="faq-0" aria-expanded="false">
+                            <span class="text-lg font-semibold">What's the best thing about Switzerland?</span>
+                            <span class="ml-6 flex items-center">
+                                <!-- Artı ikon -->
+                                <svg class="plus-icon h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                                </svg>
+                                <!-- Eksi ikon -->
+                                <svg class="minus-icon h-6 w-6 hidden" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                                </svg>
+                            </span>
+                        </button>
+                    </dt>
+                    <dd class="mt-2 hidden" id="faq-0">
+                        <p class="text-gray-600">I don't know, but the flag is a big plus. Lorem ipsum dolor sit
+                            amet
+                            consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+                    </dd>
+                </div>
+            </dl>
+            <dl class="space-y-6 w-full">
+                <div class="bg-[#FAFAF9] rounded-xl p-5">
+                    <dt>
+                        <button type="button" class="flex w-full items-center justify-between text-left text-gray-900"
+                            aria-controls="faq-0" aria-expanded="false">
+                            <span class="text-lg font-semibold">What's the best thing about Switzerland?</span>
+                            <span class="ml-6 flex items-center">
+                                <!-- Artı ikon -->
+                                <svg class="plus-icon h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                                </svg>
+                                <!-- Eksi ikon -->
+                                <svg class="minus-icon h-6 w-6 hidden" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                                </svg>
+                            </span>
+                        </button>
+                    </dt>
+                    <dd class="mt-2 hidden" id="faq-0">
+                        <p class="text-gray-600">I don't know, but the flag is a big plus. Lorem ipsum dolor sit
+                            amet
+                            consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+                    </dd>
+                </div>
+            </dl>
+        </div>
+        <div class="flex gap-12">
+            <div class="bg-white shadow-xl rounded-2xl">
+                <div class="text-center bg-[#0B0D39] text-white text-3xl font-bold py-5 rounded-t-xl">LOREM IPSUM
+                    <div class="relative group ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#0B0D39" stroke-width="10" stroke="#0B0D39"
+                            class="absolute w-6 h-6 cursor-pointer top-2 left-[45%]">
+                            <path d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <ul class="space-y-4 p-8">
+                    <!-- <li class="text-center bg-blue-900 text-white text-2xl font-bold">LOREM IPSUM</li> -->
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Doctor Consultation</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Panoramic X-Rays</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />4 All on 4 Implants</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />All on 4, Prosthetic Parts</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Temporary Prosthesis</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Permanent Prosthesis</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />12 Porcelain Crowns</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Tooth Extraction (If needed)</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />All Medications</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />First Accommodation 4 Nights</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Second Accommodation 6 Nights</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />VIP Transfers</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Multi Langual Patient Support</li>
+                    <li class="text-center text-blue-700 text-3xl font-bold">3200 £</li>
+                </ul>
+
+            </div>
+            <div class="bg-white shadow-xl rounded-2xl">
+                <div class="text-center bg-[#0B0D39] text-white text-3xl font-bold py-5 rounded-t-xl">LOREM IPSUM
+                    <div class="relative group ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#0B0D39" stroke-width="10" stroke="#0B0D39"
+                            class="absolute w-6 h-6 cursor-pointer top-2 left-[45%]">
+                            <path d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <ul class="space-y-4 p-8">
+                    <!-- <li class="text-center bg-blue-900 text-white text-2xl font-bold">LOREM IPSUM</li> -->
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Doctor Consultation</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Panoramic X-Rays</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />4 All on 4 Implants</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />All on 4, Prosthetic Parts</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Temporary Prosthesis</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Permanent Prosthesis</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />12 Porcelain Crowns</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Tooth Extraction (If needed)</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />All Medications</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />First Accommodation 4 Nights</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Second Accommodation 6 Nights</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />VIP Transfers</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Multi Langual Patient Support</li>
+                    <li class="text-center text-blue-700 text-3xl font-bold">3200 £</li>
+                </ul>
+
+            </div>
+            <div class="bg-white shadow-xl rounded-2xl">
+                <div class="text-center bg-[#0B0D39] text-white text-3xl font-bold py-5 rounded-t-xl">LOREM IPSUM
+                    <div class="relative group ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#0B0D39" stroke-width="10" stroke="#0B0D39"
+                            class="absolute w-6 h-6 cursor-pointer top-2 left-[45%]">
+                            <path d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </div>
+
+                <ul class="space-y-4 p-8">
+                    <!-- <li class="text-center bg-blue-900 text-white text-2xl font-bold">LOREM IPSUM</li> -->
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Doctor Consultation</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Panoramic X-Rays</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />4 All on 4 Implants</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />All on 4, Prosthetic Parts</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Temporary Prosthesis</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Permanent Prosthesis</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />12 Porcelain Crowns</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Tooth Extraction (If needed)</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />All Medications</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />First Accommodation 4 Nights</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Second Accommodation 6 Nights</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />VIP Transfers</li>
+                    <li class="flex gap-4"><img src="./assets/checks.svg" />Multi Langual Patient Support</li>
+                    <li class="text-center text-blue-700 text-3xl font-bold">3200 £</li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid bg-[#E6E7E2] bg-opacity-50 py-20">
+        <div class="container mx-auto">
+            <div class="flex">
+                <div>
+                    <p class="text-blue-700 font-bold uppercase mb-10">contact us</p>
+                    <img src="./assets/logo.svg" class="w-[430px]" alt="">
+                    <div class="w-[450px]"> <small>The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax
+                            quiz
+                            prog. Junk MTV quiz
+                            graced by
+                            fox whelps.
+                            Bawds jog, flick quartz, vex nymphs. Waltz, bad</small>
+                    </div>
+                    <p class="font-bold uppercase mb-0 mt-4">Call Now</p>
+                    <a href="tel:905318818038" class="text-3xl">+90 531 881 80 38</a>
+                    <br>
+                    <small>
+                        <a href="mailto:info@lumiaclinic.com">info@lumiaclinic.com
+                        </a>
+                    </small>
+                    <br>
+                    <small><a>Şenlikköy, Florya Cd. No: 47/1, 34153 Bakırköy/İstanbul</a></small>
+                </div>
+                <div class="mx-16">
+                    <ul class="space-y-8">
+                        <li><a href="" class="text-blue-700 font-bold">Our Clinic</a></li>
+                        <li><a href="">Before&After</a></li>
+                        <li><a href="">Happy Patients</a></li>
+                        <li><a href="">Our Treatments</a></li>
+                    </ul>
+                </div>
+                <div class="flex-1 bg-white p-10 shadow rounded-3xl">
+                    <p>Let's Get Linked!</p>
+                    <form action="#" method="POST">
+                        <div class="grid">
+                            <div class="mt-2.5">
+                                <input type="text" name="first-name" placeholder="Full Name"
+                                    class="block w-full rounded-md border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-gray-400 sm:text-sm/6">
+                            </div>
+                            <div class="mt-2.5">
+                                <input type="tel" name="phone-number" placeholder="Phone Number" autocomplete="tel"
+                                    class="block w-full rounded-md border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-gray-400 sm:text-sm/6">
+                            </div>
+                            <div class="mt-2.5">
+                                <input type="email" name="email" placeholder="Email" autocomplete="email"
+                                    class="block w-full rounded-md border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-gray-400 sm:text-sm/6">
+                            </div>
+                        </div>
+                        <div class="mt-4 flex justify-center">
+                            <button type="submit"
+                                class="bg-blue-700 px-14 py-2.5 rounded-full text-center text-sm font-semibold text-white shadow-sm hover:bg-yellow-400 focus-visible:outline">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="container mx-auto text-center py-4">
+        Copyright © 2024 Simur Teknoloji A.Ş. Bütün Hakları Saklıdır.
+    </section>
+    <section class="container-fluid relative">
+        <div class="container mx-auto flex gap-10 relative z-10 py-3 items-center">
+            <div class="text-white flex gap-10 justify-center items-center text-lg font-medium">
+                <img src="./assets/plane.svg" alt="">
+                Save up to 20% from your Flight Ticket
+            </div>
+            <div class="flex ms-auto divide-x items-center">
+                <div class="text-white flex gap-4 px-10 items-center"><img src="./assets/contact.svg" alt="">Contact Us
+                </div>
+                <div class="text-white flex gap-4 px-10 items-center"><img src="./assets/phone.svg" alt="">Phone</div>
+                <div class="text-white flex gap-4 px-10 items-center"><img src="./assets/whatsapp.svg" alt="">WhatsApp
+                </div>
+            </div>
+        </div>
+        <div class="bg-gradient-to-t from-[#0B0D39] to-[#444892] top-0 left-0 z-0 absolute h-full w-full"></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const splide = new Splide('.splide', {
+                perPage: 5,
+                gap: '1.5rem',
+                pagination: false
+            });
+            splide.on('mounted', () => {
+                const slides = document.querySelectorAll('.splide__slide');
+                slides[0].style.opacity = '0.5';
+                slides[slides.length - 1].style.opacity = '0.5';
+            });
+            splide.mount();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const splide = new Splide('.patients', {
+                perPage: 5,
+                gap: '1rem',
+                arrows: false
+            });
+            splide.on('mounted', () => {
+                const slides = document.querySelectorAll('.splide__slide');
+                slides[0].style.opacity = '0.5';
+                slides[slides.length - 1].style.opacity = '0.5';
+            });
+            splide.mount();
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const splide = new Splide('.before-after', {
+                perPage: 5,
+                gap: '1rem',
+                arrows: false,
+                center: true
+            });
+            splide.mount();
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const splide = new Splide('.videos', {
+                perPage: 5,
+                gap: '1rem',
+                arrows: false,
+                center: true
+            });
+            splide.mount();
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const splide = new Splide('.comments', {
+                perPage: 4,
+                gap: '1rem',
+                arrows: false,
+                center: true,
+                pagination: true
+            });
+            splide.mount();
+        });
+
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A',
+                    },
+                },
+            },
+        };
+
+    </script>
+</body>
+
+</html>
