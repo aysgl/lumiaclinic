@@ -164,9 +164,10 @@
         <div class="splide our-treatments relative">
             <div class="splide__track">
                 <ul class="splide__list">
-                    <li class="splide__slide mb-8">
+                    <li class="splide__slide mb-8" onclick="openTreatments(this)">
                         <div class="shadow-xl rounded-2xl p-5 h-full">
-                            <img class="rounded-2xl" src="./assets/slide1.png" data-image="./assets/slide1.png" alt="">
+                            <img class="rounded-2xl" src="./assets/slide1.png" data-treatment="./assets/slide1.png"
+                                alt="">
                             <p class="text-2xl font-bold my-8 h-16" data-title="Dental Implants">Dental Implants</p>
                             <button type="button"
                                 class=" block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-[#356dff] hover:from-[#356dff] hover:to-[#356dff] transition ease-in-out delay-150  hover:transition-all py-4">
@@ -174,19 +175,21 @@
                             </button>
                         </div>
                     </li>
-                    <li class="splide__slide mb-8">
+                    <li class="splide__slide mb-8" onclick="openTreatments(this)">
                         <div class="shadow-xl rounded-2xl p-5 h-full">
-                            <img class="rounded-2xl" src="./assets/slide2.png" data-image="./assets/slide2.png" alt="">
-                            <p class="text-2xl font-bold my-8 h-16" data-title="Hollywood Smile">Hollywood Smile</p>
+                            <img class="rounded-2xl" src="./assets/slide2.png" data-treatment="./assets/slide2.png"
+                                alt="">
+                            <p class="text-2xl font-bold my-8 h-16">Hollywood Smile</p>
                             <button type="button"
                                 class="block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-[#356dff] hover:from-[#356dff] hover:to-[#356dff] transition ease-in-out delay-150  hover:transition-all py-4">
                                 More Information
                             </button>
                         </div>
                     </li>
-                    <li class="splide__slide mb-8">
+                    <li class="splide__slide mb-8" onclick="openTreatments(this)">
                         <div class="shadow-xl rounded-2xl p-5 h-full">
-                            <img class="rounded-2xl" src="./assets/slide3.png" data-image="./assets/slide3.png" alt="">
+                            <img class="rounded-2xl" src="./assets/slide3.png" data-treatment="./assets/slide3.png"
+                                alt="">
                             <p class="text-2xl font-bold my-8 h-16" data-title="Zirconium Crowns 1">Zirconium Crowns
                             </p>
                             <button type="button"
@@ -195,9 +198,10 @@
                             </button>
                         </div>
                     </li>
-                    <li class="splide__slide mb-8">
+                    <li class="splide__slide mb-8" onclick="openTreatments(this)">
                         <div class="shadow-xl rounded-2xl p-5 h-full">
-                            <img class="rounded-2xl" src="./assets/slide4.png" data-image="./assets/slide4.png" alt="">
+                            <img class="rounded-2xl" src="./assets/slide4.png" data-treatment="./assets/slide4.png"
+                                alt="">
                             <p class="text-2xl font-bold my-8 h-16" data-title="Zirconium Crowns">Zirconium Crowns
                             </p>
                             <button type="button"
@@ -206,9 +210,10 @@
                             </button>
                         </div>
                     </li>
-                    <li class="splide__slide mb-8">
+                    <li class="splide__slide mb-8" onclick="openTreatments(this)">
                         <div class="shadow-xl rounded-2xl p-5 h-full">
-                            <img class="rounded-2xl" src="./assets/slide5.png" data-image="./assets/slide5.png" alt="">
+                            <img class="rounded-2xl" src="./assets/slide5.png" data-treatment="./assets/slide5.png"
+                                alt="">
                             <p class="text-2xl font-bold my-8 h-16" data-title=" E-max Crowns">E-max Crowns
                             </p>
                             <button type="button"
@@ -1068,91 +1073,104 @@
     </section>
 
     <!-- Treatments -->
-    <!-- <div id="treatmentModal" class="relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-        <div class="fixed inset-0 bg-[#0B0D39] transition-opacity opacity-70" aria-hidden="true"></div>
-        <div class="fixed inset-0 z-10 w-[1200px] mx-auto overflow-y-auto">
-            <div class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block z-10">
-                <button type="button" onclick="closeTreatments()"
-                    class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                    <span class="sr-only">Close</span>
-                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                        aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <div class="flex h-full w-full items-end justify-center text-center sm:items-center">
-                <div class="relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all p-6 h-auto"
-                    style="background-image:url(./assets/modalbg.png); background-size: cover; background-position: center">
-                    <div class="pt-10">
-                        <h1 id="modalTitle" class="text-3xl font-bold"></h1>
-
-                        <div id="modal-treatments" class="splide w-[600px] h-[600px]" aria-label="Beautiful Images">
-                            <div class="splide__track">
-                                <ul class="splide__list h-full" id="modal-carousel-treatments"></ul>
-                            </div>
-                        </div>
-                        <div class="flex divide-x-2 gap-10">
-                            <div>
-                                <ul class="space-y-14">
-                                    <li>
-                                        <div class="flex">
-                                            <div>
-                                                <img src="./assets/time.svg" alt="">
-                                            </div>
-                                            <div>
-                                                <strong>Time:</strong>
-                                                <p>45-90 minutes (for the crown procedure)</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex">
-                                            <div>
-                                                <img src="./assets/durability.svg" alt="">
-                                            </div>
-                                            <div>
-                                                <strong>Durability:</strong>
-                                                Up to 10-15 years with proper care
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex">
-                                            <div>
-                                                <img src="./assets/strength.svg" alt="">
-                                            </div>
-                                            <div>
-                                                <strong>Strength:</strong>
-                                                Highly durable and fracture-resistant
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex">
-                                            <div>
-                                                <img src="./assets/strength.svg" alt="">
-                                            </div>
-                                            <div>
-                                                <strong>Aesthetic:</strong>
-                                                Natural tooth-like
-                                                appearance
-                                            </div>
-                                        </div>
-
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <p id="modalDescription" class="text-lg ms-10"></p>
-                            </div>
-                        </div>
-
+    <div id="treatmentModal" class="relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
+        <div class="fixed inset-0 z-10 max-w-[1200px] mx-auto overflow-y-auto">
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all">
+                    <div class="absolute right-0 top-0 pr-4 pt-4 z-10" onclick="closeTreatments()">
+                        <button type="button"
+                            class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                            <span class="sr-only">Close</span>
+                            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
                     </div>
+                    <div class="relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all p-6 h-auto"
+                        style="background-image:url(./assets/modalbg.png); background-size: cover; background-position: top">
+                        <div class="pt-10">
+                            <h1 id="modalTitle" class="text-6xl font-bold my-10"></h1>
+                            <div class="flex gap-10">
+                                <div>
+                                    <ul class="space-y-6">
+                                        <li>
+                                            <div class="flex items-start">
+                                                <img src="./assets/time.svg" alt="">
+
+                                                <div class="ms-2">
+                                                    <strong>Time:</strong>
+                                                    <p>45-90 minutes (for the crown procedure)</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="flex items-start">
+                                                <img src="./assets/durability.svg" alt="">
+                                                <div class="ms-2">
+                                                    <strong>Durability:</strong>
+                                                    Up to 10-15 years with proper care
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="flex items-start">
+                                                <img src="./assets/strength.svg" alt="">
+                                                <div class="ms-2">
+                                                    <strong>Strength:</strong>
+                                                    Highly durable and fracture-resistant
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="flex items-start">
+                                                <img src="./assets/aesthetic.svg" alt="">
+                                                <div class="ms-2">
+                                                    <strong>Aesthetic:</strong>
+                                                    Natural tooth-like
+                                                    appearance
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="divide">
+                                    <p id="modalDescription" class="ms-10"></p>
+                                </div>
+
+                                <div class="-mt-20 sm:flex hidden">
+                                    <img class="rounded-2xl w-[250px]" src="./assets/insta.png" alt="">
+                                </div>
+                            </div>
+                            <div id="modal-treatments" class="splide mt-10" aria-label="Beautiful Images">
+                                <div class="splide__track">
+                                    <ul class="splide__list" id="modal-carousel-treatments"></ul>
+                                </div>
+
+                                <div class="splide__arrows absolute right-10 bottom-5">
+                                    <button class="splide__arrow splide__arrow--prev left-0 w-[44px] h-[44px]"
+                                        type="button" aria-label="Previous slide" aria-controls="splide01-track">
+                                        <img src="./assets/arrowright.svg" alt="">
+                                    </button>
+                                    <button class="splide__arrow splide__arrow--next right-0 w-[44px] h-[44px]"
+                                        type="button" aria-label="Next slide" aria-controls="splide01-track">
+                                        <img src="./assets/arrowleft.svg" alt="">
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
+
+
 
     <!-- Dynamic Modal -->
     <div class="modal micromodal-slide" id="dynamic-modal" aria-hidden="true">
@@ -1456,7 +1474,7 @@
 
         function openTreatments(element) {
             const images = document.querySelectorAll('#ourtreatments .splide__slide img');
-            const clickedImageSrc = element.querySelector('img').getAttribute('data-image');
+            const clickedImageSrc = element.querySelector('img').getAttribute('data-treatment');
             const modal = document.getElementById('treatmentModal');
             const modalCarouselContainer = document.getElementById('modal-carousel-treatments');
 
@@ -1465,7 +1483,7 @@
 
             // Görselleri modale ekle ve verileri kaydet
             images.forEach((img) => {
-                const url = img.getAttribute('data-image');
+                const url = img.getAttribute('data-treatment');
                 const title = img.nextElementSibling?.innerText || 'Untitled'; // Başlık, yoksa "Untitled"
                 const description = `Zirconium crowns are a great choice if you:
 ✓Have a damaged, broken, or decayed tooth that needs protection.
@@ -1481,7 +1499,7 @@
                 li.classList.add('splide__slide');
 
                 const imgElement = document.createElement('img');
-                imgElement.classList.add('rounded-2xl', 'max-w-[300px]', 'h-auto', 'text-end');
+                imgElement.classList.add('rounded-full', 'max-w-[200px]', 'h-[200px]', 'text-end');
                 imgElement.src = url;
                 imgElement.alt = title;
 

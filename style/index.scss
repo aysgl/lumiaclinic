@@ -69,3 +69,10 @@ body {
         transform: none;
     }
 }
+
+
+#treatmentModal .relative {
+    min-height: 80vh;
+    height: auto;
+    overflow-y: auto;
+}

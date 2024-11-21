@@ -63,4 +63,10 @@ body {
   }
 }
 
+#treatmentModal .relative {
+  min-height: 80vh;
+  height: auto;
+  overflow-y: auto;
+}
+
 /*# sourceMappingURL=index.css.map */
