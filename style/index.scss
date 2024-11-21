@@ -76,3 +76,16 @@ body {
     height: auto;
     overflow-y: auto;
 }
+
+.videos .splide__slide {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.videos .splide__slide iframe,
+.videos .splide__slide img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+}

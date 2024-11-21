@@ -1,6 +1,7 @@
 {
-  "dependencies": {
-    "@splidejs/splide": "^4.1.4",
-    "sass": "^1.81.0"
-  }
+    "dependencies": {
+        "@splidejs/splide": "^4.1.4",
+        "@splidejs/splide-extension-video": "^0.8.0",
+        "sass": "^1.81.0"
+    }
 }

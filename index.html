@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./style/micromodal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.7.0/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css">
 </head>
 
 <body>
@@ -248,7 +249,6 @@
                         <div class="rounded-2xl">
                             <img class="rounded-2xl" src="./assets/patient1.png" data-image="./assets/patient1.png"
                                 alt="">
-
                         </div>
                     </li>
                     <li class="splide__slide">
@@ -468,67 +468,33 @@
     <section id="happypatients" class="container-fluid py-20 text-center">
         <h2 class="text text-[#356dff]">OUR HAPPY</h2>
         <p class="text-3xl font-semibold mb-10">PATIENTS VIDEOS</p>
-        <div class="splide videos relative">
+        <div class="splide videos">
             <div class="splide__track">
-                <ul class="splide__list dynamic">
-                    <li class="splide__slide">
-                        <div class="rounded-2xl shadow-xl mb-8">
-                            <iframe class="w-full rounded-2xl aspect-square border-8 border-white"
-                                src="https://www.youtube.com/embed/ziSCkPvlXeU?si=NJh8fIXqD9MG1hEE"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
+                <ul class="splide__list">
+                    <li class="splide__slide aspect-square bg-slate-500"
+                        data-splide-youtube="https://www.youtube.com/watch?v=KINll8yAIr0">
+                        <img class="rounded-2xl" src="./assets/videos1.png" alt="">
                     </li>
-                    <li class="splide__slide">
-                        <div class="rounded-2xl shadow-xl mb-8">
-                            <iframe class="w-full rounded-2xl aspect-square border-8 border-white"
-                                src="https://www.youtube.com/embed/PEuQIqDyZaY?si=oHF-PlE2LCVjnyBZ"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
+                    <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=ziSCkPvlXeU">
+                        <img class="rounded-2xl" src="./assets/videos2.png" alt="">
                     </li>
-                    <li class="splide__slide">
-                        <div class="rounded-2xl shadow-xl mb-8">
-                            <iframe class="w-full rounded-2xl aspect-square border-8 border-white"
-                                src="https://www.youtube.com/embed/ziSCkPvlXeU?si=NJh8fIXqD9MG1hEE"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
+                    <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=NeheAjlkCuo">
+                        <img class="rounded-2xl" src="./assets/videos3.png" alt="">
                     </li>
-                    <li class="splide__slide">
-                        <div class="rounded-2xl shadow-xl mb-8">
-                            <iframe class="w-full rounded-2xl aspect-square border-8 border-white"
-                                src="https://www.youtube.com/embed/PEuQIqDyZaY?si=oHF-PlE2LCVjnyBZ"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
+                    <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=KINll8yAIr0">
+                        <img class="rounded-2xl" src="./assets/videos1.png" alt="">
                     </li>
-                    <li class="splide__slide">
-                        <div class="rounded-2xl shadow-xl mb-8">
-                            <iframe class="w-full rounded-2xl aspect-square border-8 border-white"
-                                src="https://www.youtube.com/embed/ziSCkPvlXeU?si=NJh8fIXqD9MG1hEE"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
+                    <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=ziSCkPvlXeU">
+                        <img class="rounded-2xl" src="./assets/videos2.png" alt="">
                     </li>
-                    <li class="splide__slide">
-                        <div class="rounded-2xl shadow-xl mb-8">
-                            <iframe class="w-full rounded-2xl aspect-square border-8 border-white"
-                                src="https://www.youtube.com/embed/PEuQIqDyZaY?si=oHF-PlE2LCVjnyBZ"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
+                    <li class="splide__slide" data-splide-youtube="https://www.youtube.com/watch?v=NeheAjlkCuo">
+                        <img class="rounded-2xl" src="./assets/videos3.png" alt="">
                     </li>
                 </ul>
             </div>
         </div>
     </section>
+
 
     <section class="container-fluid py-20">
         <div class="text-center">
@@ -1204,7 +1170,8 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+    <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script src="node_modules/@splidejs/splide-extension-video/dist/js/splide-extension-video.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.7.0/build/js/intlTelInput.min.js"></script>
 
@@ -1228,6 +1195,13 @@
             slides[currentIndex].style.opacity = '1';
             slides[leftIndex].style.opacity = '0.3';
             slides[rightIndex].style.opacity = '0.3';
+
+            slides.forEach(slide => {
+                const iframe = slide.querySelector('iframe');
+                if (iframe) {
+                    slide.style.pointerEvents = 'none';
+                }
+            });
         };
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -1357,26 +1331,32 @@
                 beforeafter.mount();
             }
 
-
             const videosElement = document.querySelector('.videos');
             if (videosElement) {
                 const videos = new Splide('.videos', {
                     perPage: 4,
-                    gap: '1rem',
-                    pagination: false,
-                    focus: 'center',
-                    type: 'loop',
+                    gap: "1rem",
+                    type: "loop",
                     rewind: true,
-                    drag: true,
+                    focus: "center",
+                    // heightRatio: .18,
+                    cover: true,
+                    // updateOnMove: true,
+                    pagination: false,
                     breakpoints: {
                         1200: { perPage: 4 },
                         640: {
-                            perPage: 1, padding: { left: '10%', right: '10%' },
+                            perPage: 1,
+                            padding: { left: '10%', right: '10%' },
                         },
                     },
-                });
-                videos.on('move', () => updateSlideOpacity(videos));
-                videos.mount();
+                    arrows: true,
+                    video: {
+                        loop: true,
+                        // autoplay: true,
+                        // mute: true,
+                    }
+                }).mount(window.splide.Extensions);
             }
 
             const commentElement = document.querySelector('.comments');
