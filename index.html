@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/micromodal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.7.0/build/css/intlTelInput.css">
 </head>
 
 <body>
@@ -112,8 +114,8 @@
                                     class="block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
                             </div>
                             <div class="mt-2.5">
-                                <input type="tel" name="phone-number" placeholder="Phone Number" autocomplete="tel"
-                                    class="block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
+                                <input type="tel" id="phone" name="phone" placeholder="Phone Number" autocomplete="tel"
+                                    class="phone block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
                             </div>
                             <div class="mt-2.5">
                                 <input type="email" name="email" placeholder="Email" autocomplete="email"
@@ -136,44 +138,46 @@
         </div>
         <div class="bg-gradient-to-t from-[#0B0D39] to-[#444892] top-0 left-0 z-0 absolute h-full w-full"></div>
     </section>
-    <section id="ourclinic" class="container mx-auto text-center py-20">
+    <section id="ourclinic" class="container dynamic mx-auto text-center py-20 mt-20">
         <h2 class="text text-[#356dff]">VISIT</h2>
         <p class="text-3xl font-semibold mb-10">OUR CLINIC</p>
 
         <div class="flex gap-6 mb-6">
-            <div><img src="./assets/gallery1.png" alt=""></div>
-            <div class="grid gap-6">
-                <img src="./assets/gallery2.png" alt="">
-                <img src="./assets/gallery3.png" alt="">
+            <div>
+                <img class="rounded-2xl" data-image="./assets/gallery1.png" src="./assets/gallery1.png" alt="">
             </div>
-
+            <div class="grid gap-6">
+                <img class="rounded-2xl" data-image="./assets/gallery2.png" src="./assets/gallery2.png" alt="">
+                <img class="rounded-2xl" data-image="./assets/gallery3.png" src="./assets/gallery3.png" alt="">
+            </div>
         </div>
         <div class="flex gap-6">
-            <div><img src="./assets/gallery4.png" alt=""></div>
-            <div><img src="./assets/gallery5.png" alt=""></div>
+            <div><img class="rounded-2xl" data-image="./assets/gallery4.png" src="./assets/gallery4.png" alt="">
+            </div>
+            <div><img class="rounded-2xl" data-image="./assets/gallery5.png" src="./assets/gallery5.png" alt="">
+            </div>
         </div>
     </section>
     <section id="ourtreatments" class="container-fluid text-center py-20">
         <h2 class="text text-[#356dff]">OUR EXCLUSIVE</h2>
         <p class="text-3xl font-semibold mb-10">TREATMENTS</p>
-        <!-- Splide Slider -->
         <div class="splide our-treatments relative">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide mb-8">
-                        <div class="shadow-xl rounded-3xl p-5 h-full items-stretch">
-                            <img src="./assets/slide1.png" alt="">
-                            <p class="text-2xl font-bold my-8 h-16">Dental Implants</p>
+                        <div class="shadow-xl rounded-2xl p-5 h-full">
+                            <img class="rounded-2xl" src="./assets/slide1.png" data-image="./assets/slide1.png" alt="">
+                            <p class="text-2xl font-bold my-8 h-16" data-title="Dental Implants">Dental Implants</p>
                             <button type="button"
                                 class=" block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-[#356dff] hover:from-[#356dff] hover:to-[#356dff] transition ease-in-out delay-150  hover:transition-all py-4">
-                                More Information 1
+                                More Information
                             </button>
                         </div>
                     </li>
                     <li class="splide__slide mb-8">
-                        <div class="shadow-xl rounded-3xl p-5 h-full">
-                            <img src="./assets/slide2.png" alt="">
-                            <p class="text-2xl font-bold my-8 h-16">Hollywood Smile</p>
+                        <div class="shadow-xl rounded-2xl p-5 h-full">
+                            <img class="rounded-2xl" src="./assets/slide2.png" data-image="./assets/slide2.png" alt="">
+                            <p class="text-2xl font-bold my-8 h-16" data-title="Hollywood Smile">Hollywood Smile</p>
                             <button type="button"
                                 class="block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-[#356dff] hover:from-[#356dff] hover:to-[#356dff] transition ease-in-out delay-150  hover:transition-all py-4">
                                 More Information
@@ -181,9 +185,10 @@
                         </div>
                     </li>
                     <li class="splide__slide mb-8">
-                        <div class="shadow-xl rounded-3xl p-5 h-full">
-                            <img src="./assets/slide3.png" alt="">
-                            <p class="text-2xl font-bold my-8 h-16">Zirconium Crowns 1</p>
+                        <div class="shadow-xl rounded-2xl p-5 h-full">
+                            <img class="rounded-2xl" src="./assets/slide3.png" data-image="./assets/slide3.png" alt="">
+                            <p class="text-2xl font-bold my-8 h-16" data-title="Zirconium Crowns 1">Zirconium Crowns
+                            </p>
                             <button type="button"
                                 class="block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-[#356dff] hover:from-[#356dff] hover:to-[#356dff] transition ease-in-out delay-150  hover:transition-all py-4">
                                 More Information
@@ -191,9 +196,10 @@
                         </div>
                     </li>
                     <li class="splide__slide mb-8">
-                        <div class="shadow-xl rounded-3xl p-5 h-full">
-                            <img src="./assets/slide3.png" alt="">
-                            <p class="text-2xl font-bold my-8 h-16">Zirconium Crowns 2</p>
+                        <div class="shadow-xl rounded-2xl p-5 h-full">
+                            <img class="rounded-2xl" src="./assets/slide4.png" data-image="./assets/slide4.png" alt="">
+                            <p class="text-2xl font-bold my-8 h-16" data-title="Zirconium Crowns">Zirconium Crowns
+                            </p>
                             <button type="button"
                                 class="block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-[#356dff] hover:from-[#356dff] hover:to-[#356dff] transition ease-in-out delay-150  hover:transition-all py-4">
                                 More Information
@@ -201,29 +207,10 @@
                         </div>
                     </li>
                     <li class="splide__slide mb-8">
-                        <div class="shadow-xl rounded-3xl p-5 h-full">
-                            <img src="./assets/slide3.png" alt="">
-                            <p class="text-2xl font-bold my-8 h-16">Zirconium Crowns 3</p>
-                            <button type="button"
-                                class="block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-[#356dff] hover:from-[#356dff] hover:to-[#356dff] transition ease-in-out delay-150  hover:transition-all py-4">
-                                More Information
-                            </button>
-                        </div>
-                    </li>
-                    <li class="splide__slide mb-8">
-                        <div class="shadow-xl rounded-3xl p-5 h-full">
-                            <img src="./assets/slide3.png" alt="">
-                            <p class="text-2xl font-bold my-8 h-16">Zirconium Crowns 4</p>
-                            <button type="button"
-                                class="block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-[#356dff] hover:from-[#356dff] hover:to-[#356dff] transition ease-in-out delay-150  hover:transition-all py-4">
-                                More Information
-                            </button>
-                        </div>
-                    </li>
-                    <li class="splide__slide mb-8">
-                        <div class="shadow-xl rounded-3xl p-5 h-full">
-                            <img src="./assets/slide3.png" alt="">
-                            <p class="text-2xl font-bold my-8 h-16">Zirconium Crowns 5</p>
+                        <div class="shadow-xl rounded-2xl p-5 h-full">
+                            <img class="rounded-2xl" src="./assets/slide5.png" data-image="./assets/slide5.png" alt="">
+                            <p class="text-2xl font-bold my-8 h-16" data-title=" E-max Crowns">E-max Crowns
+                            </p>
                             <button type="button"
                                 class="block w-full rounded-2xl text-white font-semibold bg-gradient-to-l from-cyan-400 to-[#356dff] hover:from-[#356dff] hover:to-[#356dff] transition ease-in-out delay-150  hover:transition-all py-4">
                                 More Information
@@ -232,15 +219,16 @@
                     </li>
                 </ul>
             </div>
-            <div class="splide__arrows absolute left-[47%] -bottom-5 w-[100px]">
+            <div class="splide__arrows absolute left-[50%] -bottom-5">
                 <button class="splide__arrow splide__arrow--prev left-0 w-[44px] h-[44px]" type="button"
-                    aria-label="Next slide" aria-controls="splide01-track">
-                    <img src="./assets/arrowleft.svg" alt="">
-                </button>
-                <button class="splide__arrow splide__arrow--next right-0 w-[44px] h-[44px]" type="button"
                     aria-label="Previous slide" aria-controls="splide01-track">
                     <img src="./assets/arrowright.svg" alt="">
                 </button>
+                <button class="splide__arrow splide__arrow--next right-0 w-[44px] h-[44px]" type="button"
+                    aria-label="Next slide" aria-controls="splide01-track">
+                    <img src="./assets/arrowleft.svg" alt="">
+                </button>
+
             </div>
         </div>
 
@@ -250,39 +238,40 @@
         <p class="text-3xl font-semibold mb-10">PATIENTS</p>
         <div class="splide patients relative">
             <div class="splide__track">
-                <ul class="splide__list">
+                <ul class="splide__list dynamic">
                     <li class="splide__slide">
-                        <div class="rounded-3xl">
-                            <img src="./assets/patient1.png" alt="">
+                        <div class="rounded-2xl">
+                            <img class="rounded-2xl" src="./assets/patient1.png" data-image="./assets/patient1.png"
+                                alt="">
 
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="rounded-3xl">
-                            <img src="./assets/patient2.png" alt="">
+                        <div class="rounded-2xl">
+                            <img class="rounded-2xl" src="./assets/patient2.png" data-image="./assets/patient2.png"
+                                alt="">
 
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="rounded-3xl">
-                            <img src="./assets/patient3.png" alt="">
+                        <div class="rounded-2xl">
+                            <img class="rounded-2xl" src="./assets/patient3.png" data-image="./assets/patient3.png"
+                                alt="">
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="rounded-3xl">
-                            <img src="./assets/patient3.png" alt="">
+                        <div class="rounded-2xl">
+                            <img class="rounded-2xl" src="./assets/patient4.png" data-image="./assets/patient4.png"
+                                alt="">
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="rounded-3xl">
-                            <img src="./assets/patient3.png" alt="">
+                        <div class="rounded-2xl">
+                            <img class="rounded-2xl" src="./assets/patient5.png" data-image="./assets/patient5.png"
+                                alt="">
                         </div>
                     </li>
-                    <li class="splide__slide">
-                        <div class="rounded-3xl">
-                            <img src="./assets/patient3.png" alt="">
-                        </div>
-                    </li>
+
                 </ul>
             </div>
         </div>
@@ -294,43 +283,31 @@
             <img src="./assets/journey.svg" alt="">
         </div>
     </section>
-    <section id="beforeafter" class="container-fluid text-center py-20">
+    <section id="beforeafter" class="container-fluid text-center py-20 bg-[#F2F3F0] mb-20">
         <h2 class="text text-[#356dff]">OUR EXCLUSIVE</h2>
-        <p class="text-3xl font-semibold mb-10">BEFORE & AFTER</p>
+        <p class="text-3xl font-semibold mb-10">BEFORE & AFTER DNEEM</p>
         <div class="splide before-after relative">
             <div class="splide__track">
                 <ul class="splide__list">
-                    <li class="splide__slide" onclick="openModal(this)">
-                        <div class="rounded-3xl">
-                            <img src="./assets/beforeafter.png" data-full-url="./assets/beforeafter.png" alt="">
-
-                        </div>
+                    <li class="splide__slide">
+                        <img class="rounded-2xl" src="./assets/beforeafter1.png" data-image="./assets/beforeafter1.png"
+                            alt="">
                     </li>
-                    <li class="splide__slide" onclick="openModal(this)">
-                        <div class="rounded-3xl">
-                            <img src="./assets/about2.png" data-full-url="./assets/about2.png" alt="">
-
-                        </div>
+                    <li class="splide__slide">
+                        <img class="rounded-2xl" src="./assets/beforeafter2.png" data-image="./assets/beforeafter2.png"
+                            alt="">
                     </li>
-                    <li class="splide__slide" onclick="openModal(this)">
-                        <div class="rounded-3xl">
-                            <img src="./assets/beforeafter.png" data-full-url="./assets/beforeafter.png" alt="">
-                        </div>
+                    <li class="splide__slide">
+                        <img class="rounded-2xl" src="./assets/beforeafter3.png" data-image="./assets/beforeafter3.png"
+                            alt="">
                     </li>
-                    <li class="splide__slide" onclick="openModal(this)">
-                        <div class="rounded-3xl">
-                            <img src="./assets/beforeafter.png" data-full-url="./assets/beforeafter.png" alt="">
-                        </div>
+                    <li class="splide__slide">
+                        <img class="rounded-2xl" src="./assets/beforeafter4.png" data-image="./assets/beforeafter4.png"
+                            alt="">
                     </li>
-                    <li class="splide__slide" onclick="openModal(this)">
-                        <div class="rounded-3xl">
-                            <img src="./assets/about1.png" data-full-url="./assets/about1.png" alt="">
-                        </div>
-                    </li>
-                    <li class="splide__slide" onclick="openModal(this)">
-                        <div class="rounded-3xl">
-                            <img src="./assets/beforeafter.png" data-full-url="./assets/beforeafter.png" alt="">
-                        </div>
+                    <li class="splide__slide">
+                        <img class="rounded-2xl" src="./assets/beforeafter5.png" data-image="./assets/beforeafter5.png"
+                            alt="">
                     </li>
                 </ul>
             </div>
@@ -388,7 +365,7 @@
                         provide
                         you a free consultation.</p>
                 </div>
-                <img src="./assets/about1.png" alt="About Image" class="w-full h-full object-cover">
+                <img src="./assets/about1.png" alt="About Image" class="w-full h-full object-cover rounded-2xl">
             </div>
             <div class="relative h-full">
                 <div class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
@@ -397,7 +374,7 @@
                         provide
                         you a free consultation.</p>
                 </div>
-                <img src="./assets/about2.png" alt="About Image" class="w-full h-full object-cover">
+                <img src="./assets/about2.png" alt="About Image" class="w-full h-full object-cover rounded-2xl">
             </div>
             <div class="relative h-full">
                 <div class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
@@ -406,7 +383,7 @@
                         provide
                         you a free consultation.</p>
                 </div>
-                <img src="./assets/about3.png" alt="About Image" class="w-full h-full object-cover">
+                <img src="./assets/about3.png" alt="About Image" class="w-full h-full object-cover rounded-2xl">
             </div>
             <div class="relative h-full">
                 <div class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
@@ -415,7 +392,7 @@
                         provide
                         you a free consultation.</p>
                 </div>
-                <img src="./assets/about4.png" alt="About Image" class="w-full h-full object-cover">
+                <img src="./assets/about4.png" alt="About Image" class="w-full h-full object-cover rounded-2xl">
             </div>
             <div class="relative h-full">
                 <div class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
@@ -424,7 +401,7 @@
                         provide
                         you a free consultation.</p>
                 </div>
-                <img src="./assets/about5.png" alt="About Image" class="w-full h-full object-cover">
+                <img src="./assets/about5.png" alt="About Image" class="w-full h-full object-cover rounded-2xl">
             </div>
             <div class="relative">
                 <div class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
@@ -433,7 +410,7 @@
                         provide
                         you a free consultation.</p>
                 </div>
-                <img src="./assets/about6.png" alt="About Image" class="w-full h-full object-cover">
+                <img src="./assets/about6.png" alt="About Image" class="w-full h-full object-cover rounded-2xl">
             </div>
             <div class="relative md:col-start-2">
                 <div class="absolute w-full h-full flex flex-col justify-center items-center text-center z-10 p-10">
@@ -442,12 +419,12 @@
                         provide
                         you a free consultation.</p>
                 </div>
-                <img src="./assets/about7.png" alt="About Image" class="w-full h-full object-cover">
+                <img src="./assets/about7.png" alt="About Image" class="w-full h-full object-cover rounded-2xl">
             </div>
         </div>
     </section>
-    <section class="container mx-auto py-20">
-        <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 bg-[#E6E7E2] rounded-3xl mx-auto sm:p-20 p-10 items-center">
+    <section class="container-fluid bg-[#E6E7E2] py-10 my-20">
+        <div class="container grid grid-cols-1 gap-10 sm:grid-cols-2 rounded-2xl mx-auto sm:p-20 p-10 items-center">
             <div class="flex-1 text-center mx-10">
                 <h2 class="text text-[#356dff] font-bold mb-6 text-xl">Why you should choose us?</h2>
                 <p class="text-3xl font-semibold mb-10">EXPERT CARE,
@@ -455,7 +432,7 @@
                 <p>Limited Time Offer</p>
                 <small class="font-bold">SAVE UP TO 3O% ON OURPLANE TICKETSBOOK NOW</small>
             </div>
-            <div class="flex-1 max-w-[430px] bg-white p-4 shadow-xl rounded-3xl">
+            <div class="flex-1 max-w-[430px] bg-white p-4 shadow-xl rounded-2xl">
                 <p class="text-xl text-center font-bold">Let's Get Linked!</p>
                 <form action="#" method="POST">
                     <div class="grid">
@@ -464,8 +441,8 @@
                                 class="block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
                         </div>
                         <div class="mt-2.5">
-                            <input type="tel" name="phone-number" placeholder="Phone Number" autocomplete="tel"
-                                class="block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number" autocomplete="tel"
+                                class="phone block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
                         </div>
                         <div class="mt-2.5">
                             <input type="email" name="email" placeholder="Email" autocomplete="email"
@@ -481,48 +458,73 @@
                 </form>
             </div>
         </div>
-
     </section>
+
     <section id="happypatients" class="container-fluid py-20 text-center">
         <h2 class="text text-[#356dff]">OUR HAPPY</h2>
         <p class="text-3xl font-semibold mb-10">PATIENTS VIDEOS</p>
         <div class="splide videos relative">
             <div class="splide__track">
-                <ul class="splide__list">
+                <ul class="splide__list dynamic">
                     <li class="splide__slide">
-                        <div class="rounded-3xl shadow-xl mb-8">
-                            <img class="rounded-2xl" src="./assets/videos1.png" alt="">
+                        <div class="rounded-2xl shadow-xl mb-8">
+                            <iframe class="w-full rounded-2xl aspect-square border-8 border-white"
+                                src="https://www.youtube.com/embed/ziSCkPvlXeU?si=NJh8fIXqD9MG1hEE"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="rounded-3xl shadow-xl mb-8">
-                            <img class="rounded-2xl" src="./assets/videos2.png" alt="">
+                        <div class="rounded-2xl shadow-xl mb-8">
+                            <iframe class="w-full rounded-2xl aspect-square border-8 border-white"
+                                src="https://www.youtube.com/embed/PEuQIqDyZaY?si=oHF-PlE2LCVjnyBZ"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="rounded-3xl shadow-xl mb-8">
-                            <img class="rounded-2xl" src="./assets/videos3.png" alt="">
+                        <div class="rounded-2xl shadow-xl mb-8">
+                            <iframe class="w-full rounded-2xl aspect-square border-8 border-white"
+                                src="https://www.youtube.com/embed/ziSCkPvlXeU?si=NJh8fIXqD9MG1hEE"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="rounded-3xl shadow-xl mb-8">
-                            <img class="rounded-2xl" src="./assets/videos1.png" alt="">
+                        <div class="rounded-2xl shadow-xl mb-8">
+                            <iframe class="w-full rounded-2xl aspect-square border-8 border-white"
+                                src="https://www.youtube.com/embed/PEuQIqDyZaY?si=oHF-PlE2LCVjnyBZ"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="rounded-3xl shadow-xl mb-8">
-                            <img class="rounded-2xl" src="./assets/videos2.png" alt="">
+                        <div class="rounded-2xl shadow-xl mb-8">
+                            <iframe class="w-full rounded-2xl aspect-square border-8 border-white"
+                                src="https://www.youtube.com/embed/ziSCkPvlXeU?si=NJh8fIXqD9MG1hEE"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="rounded-3xl shadow-xl mb-8">
-                            <img class="rounded-2xl" src="./assets/videos3.png" alt="">
+                        <div class="rounded-2xl shadow-xl mb-8">
+                            <iframe class="w-full rounded-2xl aspect-square border-8 border-white"
+                                src="https://www.youtube.com/embed/PEuQIqDyZaY?si=oHF-PlE2LCVjnyBZ"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
+
     <section class="container-fluid py-20">
         <div class="text-center">
             <h2 class="text text-[#356dff]">Meet Our Satisfied Patients!</h2>
@@ -542,7 +544,7 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide mb-8">
-                        <div class="shadow-xl rounded-3xl p-8">
+                        <div class="shadow-xl rounded-2xl p-8">
                             <div class="flex justify-between gap-2">
                                 <div class="flex gap-3">
                                     <div>
@@ -599,7 +601,7 @@
                         </div>
                     </li>
                     <li class="splide__slide mb-8">
-                        <div class="shadow-xl rounded-3xl p-8">
+                        <div class="shadow-xl rounded-2xl p-8">
                             <div class="flex justify-between gap-2">
                                 <div class="flex gap-3">
                                     <div>
@@ -656,7 +658,7 @@
                         </div>
                     </li>
                     <li class="splide__slide mb-8">
-                        <div class="shadow-xl rounded-3xl p-8">
+                        <div class="shadow-xl rounded-2xl p-8">
                             <div class="flex justify-between gap-2">
                                 <div class="flex gap-3">
                                     <div>
@@ -713,7 +715,7 @@
                         </div>
                     </li>
                     <li class="splide__slide mb-8">
-                        <div class="shadow-xl rounded-3xl p-8">
+                        <div class="shadow-xl rounded-2xl p-8">
                             <div class="flex justify-between gap-2">
                                 <div class="flex gap-3">
                                     <div>
@@ -781,6 +783,7 @@
             </div>
         </div>
     </section>
+
     <section class="container mx-auto pb-20">
         <div class="text-center">
             <h2 class="text text-[#356dff]">FAQ</h2>
@@ -881,7 +884,6 @@
                 </div>
 
                 <ul class="space-y-4 p-8">
-                    <!-- <li class="text-center bg-blue-900 text-white text-2xl font-bold">LOREM IPSUM</li> -->
                     <li class="flex gap-4"><img src="./assets/checks.svg" />Doctor Consultation</li>
                     <li class="flex gap-4"><img src="./assets/checks.svg" />Panoramic X-Rays</li>
                     <li class="flex gap-4"><img src="./assets/checks.svg" />4 All on 4 Implants</li>
@@ -910,7 +912,6 @@
                 </div>
 
                 <ul class="space-y-4 p-8">
-                    <!-- <li class="text-center bg-blue-900 text-white text-2xl font-bold">LOREM IPSUM</li> -->
                     <li class="flex gap-4"><img src="./assets/checks.svg" />Doctor Consultation</li>
                     <li class="flex gap-4"><img src="./assets/checks.svg" />Panoramic X-Rays</li>
                     <li class="flex gap-4"><img src="./assets/checks.svg" />4 All on 4 Implants</li>
@@ -939,7 +940,6 @@
                 </div>
 
                 <ul class="space-y-4 p-8">
-                    <!-- <li class="text-center bg-blue-900 text-white text-2xl font-bold">LOREM IPSUM</li> -->
                     <li class="flex gap-4"><img src="./assets/checks.svg" />Doctor Consultation</li>
                     <li class="flex gap-4"><img src="./assets/checks.svg" />Panoramic X-Rays</li>
                     <li class="flex gap-4"><img src="./assets/checks.svg" />4 All on 4 Implants</li>
@@ -959,6 +959,7 @@
             </div>
         </div>
     </section>
+
     <section id="contactus" class="container-fluid bg-[#E6E7E2] bg-opacity-50 py-10 mt-20">
         <div class="container mx-auto">
             <div class="grid sm:grid-cols-3 grid-cols-1 gap-10 justify-between items-center">
@@ -984,7 +985,7 @@
                         <li><a href="#ourtreatments">Our Treatments</a></li>
                     </ul>
                 </div>
-                <div class=" w-full bg-white p-6 shadow-xl rounded-3xl mb-10">
+                <div class=" w-full bg-white p-6 shadow-xl rounded-2xl mb-10">
                     <p class="text-xl text-center font-bold">Let's Get Linked!</p>
                     <form action="#" method="POST">
                         <div class="grid">
@@ -993,8 +994,8 @@
                                     class="block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
                             </div>
                             <div class="mt-2.5">
-                                <input type="tel" name="phone-number" placeholder="Phone Number" autocomplete="tel"
-                                    class="block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
+                                <input type="tel" id="phone" name="phone" placeholder="Phone Number" autocomplete="tel"
+                                    class="phone block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
                             </div>
                             <div class="mt-2.5">
                                 <input type="email" name="email" placeholder="Email" autocomplete="email"
@@ -1032,14 +1033,25 @@
             </div>
         </div>
     </section>
+
     <section class="container mx-auto text-center py-4 text-gray-400">
         Copyright © 2024 Simur Teknoloji A.Ş. Bütün Hakları Saklıdır.
     </section>
+
     <section class="container-fluid relative">
         <div class="container mx-auto grid sm:grid-cols-2 grid-cols-1 sm:gap-10 gap-4 relative z-10 py-3 items-center">
             <div class="text-white flex gap-10 justify-center items-center text-lg font-medium">
-                <img src="./assets/plane.svg" alt="">
-                Save up to 20% from your Flight Ticket
+                <img src="./assets/plane.svg" class="sm:flex hidden" alt="">
+                <div class="splide advertisement" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide mt-4 md:text-left text-center">Save up to 20% from your Flight
+                                Ticket</li>
+                            <li class="splide__slide mt-4 md:text-left text-center">Lorem ipsum sit amet dolor</li>
+                            <li class="splide__slide mt-4 md:text-left text-center">Follow us!</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="grid sm:grid-cols-3 grid-cols-1 gap-3 mx-auto sm:divide-x items-center">
                 <div class="text-white flex gap-4 sm:px-6 px-3 items-center"><img src="./assets/contact.svg"
@@ -1055,29 +1067,118 @@
         <div class="bg-gradient-to-t from-[#0B0D39] to-[#444892] top-0 left-0 z-0 absolute h-full w-full"></div>
     </section>
 
-    <!-- Modal -->
-    <div id="modal" class="relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-        <div class="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
-
-        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+    <!-- Treatments -->
+    <!-- <div id="treatmentModal" class="relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-[#0B0D39] transition-opacity opacity-70" aria-hidden="true"></div>
+        <div class="fixed inset-0 z-10 w-[1200px] mx-auto overflow-y-auto">
             <div class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block z-10">
-                <button type="button" onclick="closeModal()"
+                <button type="button" onclick="closeTreatments()"
                     class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                     <span class="sr-only">Close</span>
                     <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                        aria-hidden="true" data-slot="icon">
+                        aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
             <div class="flex h-full w-full items-end justify-center text-center sm:items-center">
-                <div
-                    class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all p-6 h-auto">
-                    <div id="image-carousel" class="splide w-[600px] h-[600px]" aria-label="Beautiful Images">
+                <div class="relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all p-6 h-auto"
+                    style="background-image:url(./assets/modalbg.png); background-size: cover; background-position: center">
+                    <div class="pt-10">
+                        <h1 id="modalTitle" class="text-3xl font-bold"></h1>
+
+                        <div id="modal-treatments" class="splide w-[600px] h-[600px]" aria-label="Beautiful Images">
+                            <div class="splide__track">
+                                <ul class="splide__list h-full" id="modal-carousel-treatments"></ul>
+                            </div>
+                        </div>
+                        <div class="flex divide-x-2 gap-10">
+                            <div>
+                                <ul class="space-y-14">
+                                    <li>
+                                        <div class="flex">
+                                            <div>
+                                                <img src="./assets/time.svg" alt="">
+                                            </div>
+                                            <div>
+                                                <strong>Time:</strong>
+                                                <p>45-90 minutes (for the crown procedure)</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex">
+                                            <div>
+                                                <img src="./assets/durability.svg" alt="">
+                                            </div>
+                                            <div>
+                                                <strong>Durability:</strong>
+                                                Up to 10-15 years with proper care
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex">
+                                            <div>
+                                                <img src="./assets/strength.svg" alt="">
+                                            </div>
+                                            <div>
+                                                <strong>Strength:</strong>
+                                                Highly durable and fracture-resistant
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="flex">
+                                            <div>
+                                                <img src="./assets/strength.svg" alt="">
+                                            </div>
+                                            <div>
+                                                <strong>Aesthetic:</strong>
+                                                Natural tooth-like
+                                                appearance
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p id="modalDescription" class="text-lg ms-10"></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Dynamic Modal -->
+    <div class="modal micromodal-slide" id="dynamic-modal" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <header class="modal__header">
+                    <h2 id="modal-title" class="font-bold text-3xl"></h2>
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close=""></button>
+                </header>
+                <div class="modal__content">
+                    <h1 id="modal-title"></h1>
+                    <div id="splidelist" class="splide" role="group" aria-label="Beautiful Images">
                         <div class="splide__track">
-                            <ul class="splide__list h-full" id="modal-carousel-images">
+                            <ul class="splide__list" id="modal-splide">
 
                             </ul>
+                        </div>
+                        <div class="splide__arrows">
+                            <button class="splide__arrow splide__arrow--prev w-[44px] h-[44px]" type="button"
+                                aria-label="Next slide" aria-controls="splide01-track">
+                                <img src="./assets/arrowleft.svg" alt="">
+                            </button>
+                            <button class="splide__arrow splide__arrow--next w-[44px] h-[44px]" type="button"
+                                aria-label="Previous slide" aria-controls="splide01-track">
+                                <img src="./assets/arrowright.svg" alt="">
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1085,9 +1186,14 @@
         </div>
     </div>
 
-
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.7.0/build/js/intlTelInput.min.js"></script>
+
+
     <script>
+
+        // Slider
         const updateSlideOpacity = (splide) => {
             const slides = splide?.Components?.Elements?.slides;
             if (!slides) return;
@@ -1106,102 +1212,203 @@
             slides[rightIndex].style.opacity = '0.3';
         };
 
-        new Splide('#image-carousel').mount();
+        document.addEventListener("DOMContentLoaded", function () {
+            const modalTitle = document.getElementById("modal-title");
+            const splideList = document.getElementById("modal-splide");
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const treatment = new Splide('.our-treatments', {
-                perPage: 4,
-                gap: '1rem',
-                pagination: false,
-                focus: 'center',
-                type: 'loop',
-                rewind: true,
-                drag: true,
-                breakpoints: {
-                    1200: { perPage: 4 },
-                    640: { perPage: 2 },
-                },
+            const modalTriggerElements = document.querySelectorAll("section img[data-image]");
+
+            modalTriggerElements.forEach((element) => {
+                element.addEventListener("click", function () {
+                    const parentSection = element.closest("section");
+                    const galleryImages = parentSection.querySelectorAll("img[data-image]");
+                    const clickedImageSrc = element.getAttribute("data-image");
+                    const title = element.closest("li")?.querySelector("p[data-title]")?.getAttribute("data-title");
+
+                    if (modalTitle) {
+                        modalTitle.textContent = title;
+                    }
+
+                    let startIndex = Array.from(galleryImages).findIndex(
+                        (galleryImage) => galleryImage.getAttribute("data-image") === clickedImageSrc
+                    );
+
+                    if (startIndex === -1) {
+                        startIndex = 0;
+                    }
+
+                    splideList.innerHTML = '';
+
+                    galleryImages.forEach(galleryImage => {
+                        const galleryImageSrc = galleryImage.getAttribute("data-image");
+
+                        const slide = document.createElement("li");
+                        slide.classList.add("splide__slide");
+                        slide.innerHTML = `<img src="${galleryImageSrc}" alt="Gallery Image" class="mx-auto w-auto max-h-[600px] rounded-2xl">`;
+                        splideList.appendChild(slide);
+                    });
+
+                    const splides = new Splide('#splidelist', {
+                        type: 'fade',
+                        pagination: false,
+                        focus: false,
+                        arrows: true,
+                        speed: 500,
+                        start: startIndex,
+                    });
+
+                    splides.mount();
+
+                    MicroModal.show("dynamic-modal");
+                });
             });
-            treatment.on('mounted', () => {
-                setTimeout(() => {
-                    updateSlideOpacity();
-                }, 100);
-            });
-            treatment.on('move', () => updateSlideOpacity(treatment));
-            treatment.mount();
+
+            const treatmentElement = document.querySelector('.our-treatments');
+
+            if (treatmentElement) {
+                const treatment = new Splide('.our-treatments', {
+                    perPage: 4,
+                    gap: '1rem',
+                    pagination: false,
+                    focus: 'center',
+                    type: 'loop',
+                    rewind: true,
+                    drag: true,
+                    breakpoints: {
+                        1200: { perPage: 4 },
+                        640: {
+                            perPage: 1, padding: { left: '10%', right: '10%' },
+                        },
+                    },
+                });
+                treatment.on('mounted', () => {
+                    setTimeout(() => {
+                        updateSlideOpacity();
+                    }, 100);
+                });
+                treatment.on('move', () => updateSlideOpacity(treatment));
+                treatment.mount();
+            }
+
+            const patientsElement = document.querySelector('.patients');
+            if (patientsElement) {
+                const patients = new Splide('.patients', {
+                    perPage: 4,
+                    gap: '1rem',
+                    pagination: false,
+                    focus: 'center',
+                    type: 'loop',
+                    rewind: true,
+                    drag: true,
+                    arrow: false,
+                    breakpoints: {
+                        1200: { perPage: 4 },
+                        640: {
+                            perPage: 1, padding: { left: '10%', right: '10%' },
+                        },
+                    },
+                });
+                patients.on('mounted', () => {
+                    setTimeout(() => {
+                        updateSlideOpacity();
+                    }, 100);
+                });
+                patients.on('move', () => updateSlideOpacity(patients));
+                patients.mount();
+            }
+
+            const beforeElement = document.querySelector('.before-after');
+            if (beforeElement) {
+                const beforeafter = new Splide('.before-after', {
+                    perPage: 4,
+                    gap: '1rem',
+                    pagination: false,
+                    focus: "center",
+                    type: 'loop',
+                    rewind: true,
+                    drag: true,
+                    arrow: false,
+                    breakpoints: {
+                        1200: { perPage: 4 },
+                        640: {
+                            perPage: 1, padding: { left: '10%', right: '10%' },
+                        },
+                    },
+                });
+                beforeafter.on('move', () => updateSlideOpacity(beforeafter));
+                beforeafter.mount();
+            }
 
 
-            const patients = new Splide('.patients', {
-                perPage: 4,
-                gap: '1rem',
-                pagination: false,
-                focus: 'center',
-                type: 'loop',
-                rewind: true,
-                drag: true,
-                arrow: false,
-                breakpoints: {
-                    1200: { perPage: 4 },
-                    640: { perPage: 2 },
-                },
-            });
-            patients.on('mounted', () => {
-                setTimeout(() => {
-                    updateSlideOpacity();
-                }, 100);
-            });
-            patients.on('move', () => updateSlideOpacity(patients));
-            patients.mount();
+            const videosElement = document.querySelector('.videos');
+            if (videosElement) {
+                const videos = new Splide('.videos', {
+                    perPage: 4,
+                    gap: '1rem',
+                    pagination: false,
+                    focus: 'center',
+                    type: 'loop',
+                    rewind: true,
+                    drag: true,
+                    breakpoints: {
+                        1200: { perPage: 4 },
+                        640: {
+                            perPage: 1, padding: { left: '10%', right: '10%' },
+                        },
+                    },
+                });
+                videos.on('move', () => updateSlideOpacity(videos));
+                videos.mount();
+            }
 
+            const commentElement = document.querySelector('.comments');
+            if (commentElement) {
+                const comments = new Splide('.comments', {
+                    perPage: 2.5,
+                    focus: "center",
+                    gap: '1rem',
+                    type: 'loop',
+                    rewind: true,
+                    drag: true,
+                    arrow: true,
+                    breakpoints: {
+                        1200: { perPage: 2 },
+                        640: {
+                            perPage: 1, padding: { left: '10%', right: '10%' },
+                        },
+                    },
+                });
+                comments.on('move', () => updateSlideOpacity(comments));
+                comments.mount();
+            }
 
-            const beforeafter = new Splide('.before-after', {
-                perPage: 4,
-                gap: '1rem',
-                pagination: false,
-                focus: 'center',
-                type: 'loop',
-                rewind: true,
-                drag: true,
-                arrow: false,
-                breakpoints: {
-                    1200: { perPage: 4 },
-                    640: { perPage: 2 },
-                },
-            });
-            beforeafter.on('move', () => updateSlideOpacity(beforeafter));
-            beforeafter.mount();
+            const advElement = document.querySelector('.advertisement');
+            if (advElement) {
+                const advertisement = new Splide('.advertisement', {
+                    direction: 'ttb',
+                    arrows: false,
+                    pagination: false,
+                    height: '80px',
+                    autoplay: true,
+                    rewind: true,
+                    breakpoints: {
+                        640: {
+                            perPage: 1,
+                        },
+                    },
+                });
+                advertisement.mount();
+            }
+        });
 
-            const videos = new Splide('.videos', {
-                perPage: 4,
-                gap: '1rem',
-                pagination: false,
-                focus: 'center',
-                type: 'loop',
-                rewind: true,
-                drag: true,
-                breakpoints: {
-                    1200: { perPage: 4 },
-                    640: { perPage: 2 },
-                },
+        // Phone
+        const inputs = document.querySelectorAll(".phone");
+        inputs.forEach(input => {
+            window.intlTelInput(input, {
+                loadUtilsOnInit: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.7.0/build/js/utils.js",
+                initialCountry: "tr",
+                containerClass: "w-full"
             });
-            videos.on('move', () => updateSlideOpacity(videos));
-            videos.mount();
-
-            const comments = new Splide('.comments', {
-                perPage: 2.5,
-                focus: "center",
-                gap: '1rem',
-                type: 'loop',
-                rewind: true,
-                drag: true,
-                arrow: true,
-                breakpoints: {
-                    1200: { perPage: 2 },
-                    640: { perPage: 1, arrow: false },
-                },
-            });
-            comments.on('move', () => updateSlideOpacity(comments));
-            comments.mount();
         });
 
         // Navbar anchor
@@ -1243,53 +1450,81 @@
             mobileMenu.classList.add('hidden');
         });
 
-        // Modal
-        let splideModal;
 
-        function openModal(element) {
-            const images = document.querySelectorAll('#beforeafter .splide__slide img');
-            const clickedImageSrc = element.querySelector('img').getAttribute('data-full-url');
-            const imageUrls = Array.from(images).map(img => img.getAttribute('data-full-url'));
-            const modalCarouselContainer = document.getElementById('modal-carousel-images');
+        let splideTreatments;
+        let treatmentData = []; // Title ve description verileri için dizi
+
+        function openTreatments(element) {
+            const images = document.querySelectorAll('#ourtreatments .splide__slide img');
+            const clickedImageSrc = element.querySelector('img').getAttribute('data-image');
+            const modal = document.getElementById('treatmentModal');
+            const modalCarouselContainer = document.getElementById('modal-carousel-treatments');
+
             modalCarouselContainer.innerHTML = '';
+            treatmentData = []; // Verileri sıfırla
 
-            imageUrls.forEach(url => {
+            // Görselleri modale ekle ve verileri kaydet
+            images.forEach((img) => {
+                const url = img.getAttribute('data-image');
+                const title = img.nextElementSibling?.innerText || 'Untitled'; // Başlık, yoksa "Untitled"
+                const description = `Zirconium crowns are a great choice if you:
+✓Have a damaged, broken, or decayed tooth that needs protection.
+✓Need to replace a large filling with a stronger, more durable solution.
+✓ Want to cover a dental implant or enhance the appearance of discolored teeth.
+✓ Are looking for a solution that combines strength with a natural, aesthetic appearance.
+                
+ ${title}`; // Description'ı düzenle
+
+                treatmentData.push({ url, title, description });
+
                 const li = document.createElement('li');
                 li.classList.add('splide__slide');
-                const img = document.createElement('img');
-                img.classList.add('rounded-3xl', 'max-w-[600px]', 'h-[600px]');
-                img.src = url;
-                img.alt = 'Image';
-                li.appendChild(img);
+
+                const imgElement = document.createElement('img');
+                imgElement.classList.add('rounded-2xl', 'max-w-[300px]', 'h-auto', 'text-end');
+                imgElement.src = url;
+                imgElement.alt = title;
+
+                li.appendChild(imgElement);
                 modalCarouselContainer.appendChild(li);
             });
 
-            setTimeout(() => {
-                const activeImage = Array.from(modalCarouselContainer.children).find(
-                    slide => slide.querySelector('img').src === clickedImageSrc
-                );
-                if (activeImage) {
-                    activeImage.classList.add('is-active');
-                }
-            }, 100);
+            // Modalı göster
+            modal.classList.remove('hidden');
+            modal.setAttribute('aria-hidden', 'false');
+            modal.focus();
 
-            document.getElementById('modal').classList.remove('hidden');
+            // Eski Splide örneğini yok et
+            if (splideTreatments) splideTreatments.destroy();
 
-            if (splideModal) {
-                splideModal.destroy();
-            }
-
-            splideModal = new Splide('#image-carousel', {
+            // Splide'ı başlat
+            splideTreatments = new Splide('#modal-treatments', {
                 type: 'fade',
                 arrows: true,
                 pagination: false,
                 speed: 500,
             }).mount();
+
+            // Başlangıçta tıklanan görseli seç
+            const activeIndex = treatmentData.findIndex(item => item.url === clickedImageSrc);
+            if (activeIndex !== -1) {
+                splideTreatments.go(activeIndex);
+                updateModalContent(activeIndex);
+            }
+
+            // Slayt değiştiğinde içerik güncelle
+            splideTreatments.on('moved', (newIndex) => updateModalContent(newIndex));
+        }
+
+        function updateModalContent(index) {
+            const currentData = treatmentData[index];
+            document.getElementById('modalTitle').innerText = currentData.title;
+            document.getElementById('modalDescription').innerText = currentData.description;
         }
 
         // Close modal function
-        function closeModal() {
-            document.getElementById('modal').classList.add('hidden');
+        function closeTreatments() {
+            document.getElementById('treatmentModal').classList.add('hidden');
         }
     </script>
 </body>

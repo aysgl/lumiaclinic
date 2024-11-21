@@ -8,6 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.7.0/build/css/intlTelInput.css">
+
 </head>
 
 <body>
@@ -128,7 +130,8 @@
                                     class="block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
                             </div>
                             <div class="mt-2.5">
-                                <input type="tel" name="phone-number" placeholder="Phone Number" autocomplete="tel"
+                                <input style="width: 100%;" type="tel" id="phone" name="phone"
+                                    placeholder="Phone Number" autocomplete="tel"
                                     class="block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
                             </div>
                             <div class="mt-2.5">
@@ -222,7 +225,18 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.7.0/build/js/intlTelInput.min.js"></script>
+
     <script>
+        // Phone
+        const input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            loadUtilsOnInit: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.7.0/build/js/utils.js",
+            initialCountry: "tr",
+            containerClass: "w-full"
+        });
+
+        // Slider
         const updateSlideOpacity = (splide) => {
             const slides = splide?.Components?.Elements?.slides;
             if (!slides) return;

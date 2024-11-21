@@ -44,3 +44,28 @@ body {
         opacity: 1;
     }
 }
+
+/* Aktif slayta büyütme efekti ekleyin */
+#beforeafter .splide__slide.is-active {
+    transform: scale(1) !important;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Diğer slaytların geçiş efekti */
+#beforeafter .splide__slide {
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#beforeafter .splide__slide:not(.is-active) {
+    transform: scale(0.9);
+
+    @media screen and (max-width:600px) {
+        transform: none;
+    }
+}
