@@ -1073,15 +1073,15 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all p-14 h-auto"
+                    <div class="relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all md:p-14 p-6 h-auto"
                         style="background-image:url(./assets/modalbg.png); background-size: cover; background-position: top">
                         <div class="pt-12">
                             <div class="text-4xl text-center font-bold my-16 md:w-[50%] w-full">
                                 <h1>A Strong, Natural- Looking</h1>
                                 <h1 id="modalTitle"></h1>
                             </div>
-                            <div class="flex justify-between">
-                                <div class="w-1/4 me-10">
+                            <div class="md:flex justify-between">
+                                <div class="md:w-1/4 md:me-10 mb-10 md:mb-0">
                                     <ul class="space-y-6 leading-7">
                                         <li>
                                             <div class="flex items-start">
@@ -1125,7 +1125,7 @@
                                     </ul>
                                 </div>
 
-                                <div class="w-3/6 border-s ps-10">
+                                <div class="md:w-3/6 md:border-s md:ps-10">
                                     <h2 id="modalTitle" class="text-xl font-bold mb-4">Who Needs Zirconium Crowns?
                                     </h2>
                                     <p id="modalDescription" class="leading-8"></p>
@@ -1141,16 +1141,21 @@
                                         teeth, providing strength, functionality, and an appealing, natural look.</p>
                                 </div>
 
-                                <div class="w-1/6 -mt-[250px] sm:block hidden">
-                                    <img class="rounded-2xl w-full" src="./assets/insta.png" alt="">
+                                <div class="w-1/4 -mt-[250px] sm:block hidden">
+                                    <iframe class="aspect-square w-full h-[400px] rounded-2xl shadow-xl"
+                                        src="https://www.youtube.com/embed/KINll8yAIr0?si=xQkXTVELwcXunrnb"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    <!-- <img class="rounded-2xl w-full" src="./assets/insta.png" alt=""> -->
                                 </div>
                             </div>
-                            <div id="modal-treatments" class="splide mt-10" aria-label="Beautiful Images">
-                                <div class="splide__track">
+                            <div id="modal-treatments" class="splide mt-10 md:mb-0 mb-20" aria-label="Beautiful Images">
+                                <div class="splide__track mx-auto">
                                     <ul class="splide__list" id="modal-carousel-treatments"></ul>
                                 </div>
 
-                                <div class="splide__arrows absolute right-20 bottom-5">
+                                <div class="splide__arrows absolute right-[50%] md:right-20 md:bottom-5 -bottom-10">
                                     <button class="splide__arrow splide__arrow--prev ms-6" type="button"
                                         aria-label="Previous slide" aria-controls="splide01-track">
                                         <img src="./assets/next.svg" alt=""> <small class="ps-3">Next</small>
@@ -1224,11 +1229,11 @@
                 const currentScroll = window.scrollY;
 
                 if (currentScroll > lastScrollTop) {
-                    section.classList.add("fade-out");
-                    section.classList.remove("fade-in");
-                } else {
                     section.classList.remove("fade-out");
                     section.classList.add("fade-in");
+                } else {
+                    section.classList.add("fade-out");
+                    section.classList.remove("fade-in");
                 }
 
                 if (currentScroll > lastScrollTop) {
@@ -1544,7 +1549,7 @@
                 li.classList.add('splide__slide');
 
                 const imgElement = document.createElement('img');
-                imgElement.classList.add('rounded-full', 'max-w-[300px]', 'h-[300px]', 'text-end', "border", "border-4", "border-white");
+                imgElement.classList.add('rounded-full', 'md:max-w-[300px]', "aspect-square", "max-w-full", "max-h-full", 'md:h-[300px]', "border", "border-4", "border-white");
                 imgElement.src = url;
                 imgElement.alt = title;
 

@@ -84,17 +84,19 @@ body {
 }
 
 #scroll-section {
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.fade-out {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
-.fade-in {
-  opacity: 0;
   transform: translateY(124px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#scroll-section.fade-in {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#scroll-section.fade-out {
+  transform: translateY(124px);
+  opacity: 0;
 }
 
 /*# sourceMappingURL=index.css.map */
