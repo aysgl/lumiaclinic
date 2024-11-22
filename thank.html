@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/micromodal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.7.0/build/css/intlTelInput.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
 </head>
 
 <body>
@@ -81,6 +82,7 @@
             </div>
         </div>
     </header>
+
     <section class="flex items-center justify-center min-h-75 mt-20 p-10">
         <div class="w-full max-w-xl text-center mt-20">
             <div class="mb-10">
@@ -121,7 +123,7 @@
                         <li><a href="#ourtreatments">Our Treatments</a></li>
                     </ul>
                 </div>
-                <div class=" w-full bg-white p-6 shadow-xl rounded-3xl mb-10">
+                <div class=" w-full bg-white p-6 shadow-xl rounded-2xl mb-10">
                     <p class="text-xl text-center font-bold">Let's Get Linked!</p>
                     <form action="#" method="POST">
                         <div class="grid">
@@ -130,9 +132,8 @@
                                     class="block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
                             </div>
                             <div class="mt-2.5">
-                                <input style="width: 100%;" type="tel" id="phone" name="phone"
-                                    placeholder="Phone Number" autocomplete="tel"
-                                    class="block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
+                                <input type="tel" id="phone" name="phone" placeholder="Phone Number" autocomplete="tel"
+                                    class="phone block w-full rounded-lg border-0 px-3.5 py-2 bg-[#e6e7e2] shadow-sm placeholder:text-[#0B0D39]">
                             </div>
                             <div class="mt-2.5">
                                 <input type="email" name="email" placeholder="Email" autocomplete="email"
@@ -170,52 +171,177 @@
             </div>
         </div>
     </section>
-    <section class="container mx-auto text-center py-4 text-gray-400">
+
+    <section class="container mx-auto text-center py-4 text-gray-400 mb-10">
         Copyright © 2024 Simur Teknoloji A.Ş. Bütün Hakları Saklıdır.
+        <div class="my-20"></div>
     </section>
-    <section class="container-fluid relative">
-        <div class="container mx-auto grid sm:grid-cols-2 grid-cols-1 sm:gap-10 gap-4 relative z-10 py-3 items-center">
+
+    <section id="scroll-section"
+        class="container-fluid bg-gradient-to-t from-[#0B0D39] to-[#444892] w-full transition-all duration-300 ease-in-out fixed bottom-0 z-20">
+        <div class="container mx-auto grid sm:grid-cols-2 grid-cols-1 sm:gap-10 gap-4 py-3 items-center">
             <div class="text-white flex gap-10 justify-center items-center text-lg font-medium">
-                <img src="./assets/plane.svg" alt="">
-                Save up to 20% from your Flight Ticket
+                <img src="./assets/plane.svg" class="sm:flex hidden" alt="">
+                <div class="splide advertisement" role="group" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li
+                                class="splide__slide md:justify-start justify-center sm:h-[40px] h-[80px] flex items-center">
+                                Save up
+                                to 20%
+                                from your Flight
+                                Ticket</li>
+                            <li
+                                class="splide__slide md:justify-start justify-center sm:h-[40px] h-[80px] flex items-center">
+                                Lorem
+                                ipsum
+                                sit amet dolor</li>
+                            <li
+                                class="splide__slide md:justify-start justify-center sm:h-[40px] h-[80px] flex items-center">
+                                Follow
+                                us!
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="grid sm:grid-cols-3 grid-cols-1 gap-3 mx-auto sm:divide-x items-center">
-                <div class="text-white flex gap-4 sm:px-6 px-3 items-center"><img src="./assets/contact.svg"
-                        alt="">Contact Us
+            <div class="grid grid-cols-3 gap-3 mx-auto sm:divide-x items-center">
+                <div class="text-white flex gap-4 sm:px-6 px-3 items-center">
+                    <img src="./assets/contact.svg" alt=""><span class="sm:flex hidden">Contact Us</span>
                 </div>
-                <div class="text-white flex gap-4 sm:px-6 px-3 items-center"><img src="./assets/phone.svg" alt="">Phone
+                <div class="text-white flex gap-4 sm:px-6 px-3 items-center">
+                    <img src="./assets/phone.svg" alt=""><span class="sm:flex hidden">Phone</span>
                 </div>
-                <div class="text-white flex gap-4 sm:px-6 px-3 items-center"><img src="./assets/whatsapp.svg"
-                        alt="">WhatsApp
+                <div class="text-white flex gap-4 sm:px-6 px-3 items-center">
+                    <img src="./assets/whatsapp.svg" alt=""><span class="sm:flex hidden">WhatsApp</span>
                 </div>
             </div>
         </div>
-        <div class="bg-gradient-to-t from-[#0B0D39] to-[#444892] top-0 left-0 z-0 absolute h-full w-full"></div>
     </section>
 
-    <!-- Modal -->
-    <div id="modal" class="relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    <!-- Treatments -->
+    <div id="treatmentModal" class="relative z-50 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
         <div class="fixed inset-0 bg-gray-500/75 transition-opacity" aria-hidden="true"></div>
+        <div class="fixed inset-0 z-10 max-w-[1200px] mx-auto overflow-y-auto">
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all">
+                    <div class="absolute right-0 top-0 pr-4 pt-4 z-10" onclick="closeTreatments()">
+                        <button type="button"
+                            class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                            <span class="sr-only">Close</span>
+                            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                aria-hidden="true" data-slot="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="relative transform overflow-hidden rounded-lg text-left shadow-xl transition-all p-6 h-auto"
+                        style="background-image:url(./assets/modalbg.png); background-size: cover; background-position: top">
+                        <div class="pt-10">
+                            <h1 id="modalTitle" class="text-6xl font-bold my-10"></h1>
+                            <div class="flex gap-10">
+                                <div>
+                                    <ul class="space-y-6">
+                                        <li>
+                                            <div class="flex items-start">
+                                                <img src="./assets/time.svg" alt="">
 
-        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
-            <div class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block z-10">
-                <button type="button" onclick="closeModal()"
-                    class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                    <span class="sr-only">Close</span>
-                    <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                        aria-hidden="true" data-slot="icon">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
-                </button>
+                                                <div class="ms-2">
+                                                    <strong>Time:</strong>
+                                                    <p>45-90 minutes (for the crown procedure)</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="flex items-start">
+                                                <img src="./assets/durability.svg" alt="">
+                                                <div class="ms-2">
+                                                    <strong>Durability:</strong>
+                                                    Up to 10-15 years with proper care
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="flex items-start">
+                                                <img src="./assets/strength.svg" alt="">
+                                                <div class="ms-2">
+                                                    <strong>Strength:</strong>
+                                                    Highly durable and fracture-resistant
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="flex items-start">
+                                                <img src="./assets/aesthetic.svg" alt="">
+                                                <div class="ms-2">
+                                                    <strong>Aesthetic:</strong>
+                                                    Natural tooth-like
+                                                    appearance
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="divide">
+                                    <p id="modalDescription" class="ms-10"></p>
+                                </div>
+
+                                <div class="-mt-20 sm:flex hidden">
+                                    <img class="rounded-2xl w-[250px]" src="./assets/insta.png" alt="">
+                                </div>
+                            </div>
+                            <div id="modal-treatments" class="splide mt-10" aria-label="Beautiful Images">
+                                <div class="splide__track">
+                                    <ul class="splide__list" id="modal-carousel-treatments"></ul>
+                                </div>
+
+                                <div class="splide__arrows absolute right-10 bottom-5">
+                                    <button class="splide__arrow splide__arrow--prev left-0 w-[44px] h-[44px]"
+                                        type="button" aria-label="Previous slide" aria-controls="splide01-track">
+                                        <img src="./assets/arrowright.svg" alt="">
+                                    </button>
+                                    <button class="splide__arrow splide__arrow--next right-0 w-[44px] h-[44px]"
+                                        type="button" aria-label="Next slide" aria-controls="splide01-track">
+                                        <img src="./assets/arrowleft.svg" alt="">
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
-            <div class="flex h-full w-full items-end justify-center text-center sm:items-center">
-                <div
-                    class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all p-6 h-auto">
-                    <div id="image-carousel" class="splide w-[600px] h-[600px]" aria-label="Beautiful Images">
+        </div>
+    </div>
+
+    <!-- Dynamic Modal -->
+    <div class="modal micromodal-slide" id="dynamic-modal" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+            <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                <header class="modal__header">
+                    <h2 id="modal-title" class="font-bold text-3xl"></h2>
+                    <button class="modal__close" aria-label="Close modal" data-micromodal-close=""></button>
+                </header>
+                <div class="modal__content">
+                    <h1 id="modal-title"></h1>
+                    <div id="splidelist" class="splide" role="group" aria-label="Beautiful Images">
                         <div class="splide__track">
-                            <ul class="splide__list h-full" id="modal-carousel-images">
+                            <ul class="splide__list" id="modal-splide">
 
                             </ul>
+                        </div>
+                        <div class="splide__arrows">
+                            <button class="splide__arrow splide__arrow--prev w-[44px] h-[44px]" type="button"
+                                aria-label="Next slide" aria-controls="splide01-track">
+                                <img src="./assets/arrowleft.svg" alt="">
+                            </button>
+                            <button class="splide__arrow splide__arrow--next w-[44px] h-[44px]" type="button"
+                                aria-label="Previous slide" aria-controls="splide01-track">
+                                <img src="./assets/arrowright.svg" alt="">
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -223,17 +349,44 @@
         </div>
     </div>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video/dist/js/splide-extension-video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.7.0/build/js/intlTelInput.min.js"></script>
 
     <script>
-        // Phone
-        const input = document.querySelector("#phone");
-        window.intlTelInput(input, {
-            loadUtilsOnInit: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.7.0/build/js/utils.js",
-            initialCountry: "tr",
-            containerClass: "w-full"
+        // Scroll 
+        document.addEventListener("DOMContentLoaded", () => {
+            const section = document.getElementById("scroll-section");
+            const header = document.getElementsByTagName("header")[0];
+
+            let lastScrollTop = 0;
+
+            if (!header || !section) {
+                console.error("Header or section element not found.");
+                return;
+            }
+
+            window.addEventListener("scroll", () => {
+                const currentScroll = window.scrollY;
+
+                if (currentScroll > lastScrollTop) {
+                    section.classList.add("fade-out");
+                    section.classList.remove("fade-in");
+                } else {
+                    section.classList.remove("fade-out");
+                    section.classList.add("fade-in");
+                }
+
+                if (currentScroll > lastScrollTop) {
+                    header.classList.add("shadow-xl");
+                } else {
+                    header.classList.remove("shadow-xl");
+                }
+
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            });
         });
 
         // Slider
@@ -253,104 +406,221 @@
             slides[currentIndex].style.opacity = '1';
             slides[leftIndex].style.opacity = '0.3';
             slides[rightIndex].style.opacity = '0.3';
+
+            slides.forEach(slide => {
+                const iframe = slide.querySelector('iframe');
+                if (iframe) {
+                    slide.style.pointerEvents = 'none';
+                }
+            });
         };
 
-        new Splide('#image-carousel').mount();
+        document.addEventListener("DOMContentLoaded", function () {
+            const modalTitle = document.getElementById("modal-title");
+            const splideList = document.getElementById("modal-splide");
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const treatment = new Splide('.our-treatments', {
-                perPage: 4,
-                gap: '1rem',
-                pagination: false,
-                focus: 'center',
-                type: 'loop',
-                rewind: true,
-                drag: true,
-                breakpoints: {
-                    1200: { perPage: 4 },
-                    640: { perPage: 2 },
-                },
-            });
-            treatment.on('mounted', () => {
-                setTimeout(() => {
-                    updateSlideOpacity();
-                }, 100);
-            });
-            treatment.on('move', () => updateSlideOpacity(treatment));
-            treatment.mount();
+            const modalTriggerElements = document.querySelectorAll("section img[data-image]");
 
+            modalTriggerElements.forEach((element) => {
+                element.addEventListener("click", function () {
+                    const parentSection = element.closest("section");
+                    const galleryImages = parentSection.querySelectorAll("img[data-image]");
+                    const clickedImageSrc = element.getAttribute("data-image");
+                    const title = element.closest("li")?.querySelector("p[data-title]")?.getAttribute("data-title");
 
-            const patients = new Splide('.patients', {
-                perPage: 4,
-                gap: '1rem',
-                pagination: false,
-                focus: 'center',
-                type: 'loop',
-                rewind: true,
-                drag: true,
-                arrow: false,
-                breakpoints: {
-                    1200: { perPage: 4 },
-                    640: { perPage: 2 },
-                },
-            });
-            patients.on('mounted', () => {
-                setTimeout(() => {
-                    updateSlideOpacity();
-                }, 100);
-            });
-            patients.on('move', () => updateSlideOpacity(patients));
-            patients.mount();
+                    if (modalTitle) {
+                        modalTitle.textContent = title;
+                    }
 
+                    let startIndex = Array.from(galleryImages).findIndex(
+                        (galleryImage) => galleryImage.getAttribute("data-image") === clickedImageSrc
+                    );
 
-            const beforeafter = new Splide('.before-after', {
-                perPage: 4,
-                gap: '1rem',
-                pagination: false,
-                focus: 'center',
-                type: 'loop',
-                rewind: true,
-                drag: true,
-                arrow: false,
-                breakpoints: {
-                    1200: { perPage: 4 },
-                    640: { perPage: 2 },
-                },
-            });
-            beforeafter.on('move', () => updateSlideOpacity(beforeafter));
-            beforeafter.mount();
+                    if (startIndex === -1) {
+                        startIndex = 0;
+                    }
 
-            const videos = new Splide('.videos', {
-                perPage: 4,
-                gap: '1rem',
-                pagination: false,
-                focus: 'center',
-                type: 'loop',
-                rewind: true,
-                drag: true,
-                breakpoints: {
-                    1200: { perPage: 4 },
-                    640: { perPage: 2 },
-                },
-            });
-            videos.on('move', () => updateSlideOpacity(videos));
-            videos.mount();
+                    splideList.innerHTML = '';
 
-            const comments = new Splide('.comments', {
-                perPage: 2.5,
-                focus: "center",
-                gap: '1rem',
-                type: 'loop',
-                rewind: true,
-                drag: true,
-                arrow: true,
-                breakpoints: {
-                    1200: { perPage: 2 },
-                    640: { perPage: 1, arrow: false },
-                },
+                    galleryImages.forEach(galleryImage => {
+                        const galleryImageSrc = galleryImage.getAttribute("data-image");
+
+                        const slide = document.createElement("li");
+                        slide.classList.add("splide__slide");
+                        slide.innerHTML = `<img src="${galleryImageSrc}" alt="Gallery Image" class="mx-auto w-auto max-h-[600px] rounded-2xl">`;
+                        splideList.appendChild(slide);
+                    });
+
+                    const splides = new Splide('#splidelist', {
+                        type: 'fade',
+                        pagination: false,
+                        focus: false,
+                        arrows: true,
+                        speed: 500,
+                        start: startIndex,
+                    });
+
+                    splides.mount();
+
+                    MicroModal.show("dynamic-modal");
+                });
             });
-            comments.on('move', () => updateSlideOpacity(comments));
-            comments.mount();
+
+            const treatmentElement = document.querySelector('.our-treatments');
+
+            if (treatmentElement) {
+                const treatment = new Splide('.our-treatments', {
+                    perPage: 4,
+                    gap: '1rem',
+                    pagination: false,
+                    focus: 'center',
+                    type: 'loop',
+                    rewind: true,
+                    drag: true,
+                    breakpoints: {
+                        1200: { perPage: 4 },
+                        640: {
+                            perPage: 1, padding: { left: '10%', right: '10%' },
+                        },
+                    },
+                });
+                treatment.on('mounted', () => {
+                    setTimeout(() => {
+                        updateSlideOpacity();
+                    }, 100);
+                });
+                treatment.on('move', () => updateSlideOpacity(treatment));
+                treatment.mount();
+            }
+
+            const patientsElement = document.querySelector('.patients');
+            if (patientsElement) {
+                const patients = new Splide('.patients', {
+                    perPage: 4,
+                    gap: '1rem',
+                    pagination: false,
+                    focus: 'center',
+                    type: 'loop',
+                    rewind: true,
+                    drag: true,
+                    arrow: false,
+                    breakpoints: {
+                        1200: { perPage: 4 },
+                        640: {
+                            perPage: 1, padding: { left: '10%', right: '10%' },
+                        },
+                    },
+                });
+                patients.on('mounted', () => {
+                    setTimeout(() => {
+                        updateSlideOpacity();
+                    }, 100);
+                });
+                patients.on('move', () => updateSlideOpacity(patients));
+                patients.mount();
+            }
+
+            const beforeElement = document.querySelector('.before-after');
+            if (beforeElement) {
+                const beforeafter = new Splide('.before-after', {
+                    perPage: 4,
+                    gap: '1rem',
+                    pagination: false,
+                    focus: "center",
+                    type: 'loop',
+                    rewind: true,
+                    drag: true,
+                    arrow: false,
+                    breakpoints: {
+                        1200: { perPage: 4 },
+                        640: {
+                            perPage: 1, padding: { left: '10%', right: '10%' },
+                        },
+                    },
+                });
+                beforeafter.on('move', () => updateSlideOpacity(beforeafter));
+                beforeafter.mount();
+            }
+
+            const videosElement = document.querySelector('.videos');
+            if (videosElement) {
+                const videos = new Splide('.videos', {
+                    perPage: 4,
+                    gap: "1rem",
+                    type: "loop",
+                    rewind: true,
+                    focus: "center",
+                    // heightRatio: .18,
+                    cover: true,
+                    // updateOnMove: true,
+                    pagination: false,
+                    breakpoints: {
+                        1200: { perPage: 4 },
+                        640: {
+                            perPage: 1,
+                            padding: { left: '10%', right: '10%' },
+                        },
+                    },
+                    arrows: true,
+                    video: {
+                        loop: true,
+                        // autoplay: true,
+                        // mute: true,
+                    }
+                }).mount(window.splide.Extensions);
+            }
+
+            const commentElement = document.querySelector('.comments');
+            if (commentElement) {
+                const comments = new Splide('.comments', {
+                    perPage: 2.5,
+                    focus: "center",
+                    gap: '1rem',
+                    type: 'loop',
+                    rewind: true,
+                    drag: true,
+                    arrow: true,
+                    breakpoints: {
+                        1200: { perPage: 2 },
+                        640: {
+                            perPage: 1, padding: { left: '10%', right: '10%' },
+                        },
+                    },
+                });
+                comments.on('move', () => updateSlideOpacity(comments));
+                comments.mount();
+            }
+
+            const advElement = document.querySelector('.advertisement');
+            if (advElement) {
+                const advertisement = new Splide('.advertisement', {
+                    direction: 'ttb',
+                    arrows: false,
+                    pagination: false,
+                    height: '80px',
+                    heightRatio: "80px",
+                    autoplay: true,
+                    rewind: true,
+                    perPage: 1,
+                    breakpoints: {
+                        640: {
+                            height: '40px',
+                            heightRatio: "40px",
+                        }
+                    }
+                });
+                advertisement.mount();
+            }
+        });
+
+        // Phone
+        const inputs = document.querySelectorAll(".phone");
+        inputs.forEach(input => {
+            window.intlTelInput(input, {
+                loadUtilsOnInit: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.7.0/build/js/utils.js",
+                initialCountry: "tr",
+                containerClass: "w-full"
+            });
         });
 
         // Navbar anchor
@@ -392,53 +662,81 @@
             mobileMenu.classList.add('hidden');
         });
 
-        // Modal
-        let splideModal;
 
-        function openModal(element) {
-            const images = document.querySelectorAll('#beforeafter .splide__slide img');
-            const clickedImageSrc = element.querySelector('img').getAttribute('data-full-url');
-            const imageUrls = Array.from(images).map(img => img.getAttribute('data-full-url'));
-            const modalCarouselContainer = document.getElementById('modal-carousel-images');
+        let splideTreatments;
+        let treatmentData = []; // Title ve description verileri için dizi
+
+        function openTreatments(element) {
+            const images = document.querySelectorAll('#ourtreatments .splide__slide img');
+            const clickedImageSrc = element.querySelector('img').getAttribute('data-treatment');
+            const modal = document.getElementById('treatmentModal');
+            const modalCarouselContainer = document.getElementById('modal-carousel-treatments');
+
             modalCarouselContainer.innerHTML = '';
+            treatmentData = []; // Verileri sıfırla
 
-            imageUrls.forEach(url => {
+            // Görselleri modale ekle ve verileri kaydet
+            images.forEach((img) => {
+                const url = img.getAttribute('data-treatment');
+                const title = img.nextElementSibling?.innerText || 'Untitled'; // Başlık, yoksa "Untitled"
+                const description = `Zirconium crowns are a great choice if you:
+    ✓Have a damaged, broken, or decayed tooth that needs protection.
+    ✓Need to replace a large filling with a stronger, more durable solution.
+    ✓ Want to cover a dental implant or enhance the appearance of discolored teeth.
+    ✓ Are looking for a solution that combines strength with a natural, aesthetic appearance.
+                    
+     ${title}`; // Description'ı düzenle
+
+                treatmentData.push({ url, title, description });
+
                 const li = document.createElement('li');
                 li.classList.add('splide__slide');
-                const img = document.createElement('img');
-                img.classList.add('rounded-3xl', 'max-w-[600px]', 'h-[600px]');
-                img.src = url;
-                img.alt = 'Image';
-                li.appendChild(img);
+
+                const imgElement = document.createElement('img');
+                imgElement.classList.add('rounded-full', 'max-w-[200px]', 'h-[200px]', 'text-end');
+                imgElement.src = url;
+                imgElement.alt = title;
+
+                li.appendChild(imgElement);
                 modalCarouselContainer.appendChild(li);
             });
 
-            setTimeout(() => {
-                const activeImage = Array.from(modalCarouselContainer.children).find(
-                    slide => slide.querySelector('img').src === clickedImageSrc
-                );
-                if (activeImage) {
-                    activeImage.classList.add('is-active');
-                }
-            }, 100);
+            // Modalı göster
+            modal.classList.remove('hidden');
+            modal.setAttribute('aria-hidden', 'false');
+            modal.focus();
 
-            document.getElementById('modal').classList.remove('hidden');
+            // Eski Splide örneğini yok et
+            if (splideTreatments) splideTreatments.destroy();
 
-            if (splideModal) {
-                splideModal.destroy();
-            }
-
-            splideModal = new Splide('#image-carousel', {
+            // Splide'ı başlat
+            splideTreatments = new Splide('#modal-treatments', {
                 type: 'fade',
                 arrows: true,
                 pagination: false,
                 speed: 500,
             }).mount();
+
+            // Başlangıçta tıklanan görseli seç
+            const activeIndex = treatmentData.findIndex(item => item.url === clickedImageSrc);
+            if (activeIndex !== -1) {
+                splideTreatments.go(activeIndex);
+                updateModalContent(activeIndex);
+            }
+
+            // Slayt değiştiğinde içerik güncelle
+            splideTreatments.on('moved', (newIndex) => updateModalContent(newIndex));
+        }
+
+        function updateModalContent(index) {
+            const currentData = treatmentData[index];
+            document.getElementById('modalTitle').innerText = currentData.title;
+            document.getElementById('modalDescription').innerText = currentData.description;
         }
 
         // Close modal function
-        function closeModal() {
-            document.getElementById('modal').classList.add('hidden');
+        function closeTreatments() {
+            document.getElementById('treatmentModal').classList.add('hidden');
         }
     </script>
 </body>
