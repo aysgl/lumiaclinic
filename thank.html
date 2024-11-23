@@ -372,11 +372,11 @@
                 const currentScroll = window.scrollY;
 
                 if (currentScroll > lastScrollTop) {
-                    section.classList.add("fade-out");
-                    section.classList.remove("fade-in");
-                } else {
                     section.classList.remove("fade-out");
                     section.classList.add("fade-in");
+                } else {
+                    section.classList.add("fade-out");
+                    section.classList.remove("fade-in");
                 }
 
                 if (currentScroll > lastScrollTop) {
